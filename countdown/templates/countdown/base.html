@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Welcome | JujuBet</title>
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+	<!-- Ico Font CSS -->
+	<link rel="stylesheet" href="{% static 'countdown/css/icofont.css' %}" />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{% static 'countdown/css/bootstrap.min.css' %}" />
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="{% static 'countdown/css/style.css' %}" />
+	<!-- Responsive CSS -->
+	<link rel="stylesheet" href="{% static 'countdown/css/responsive.css' %}" />
+</head>
+<body class="bg-img body-bg">
+	<div class="rain-area" data-background-image="" id="rainy-parent">
+		<img class="w-100" src="{% static 'countdown/img/stadium-2606345_1920.jpg' %}" id="rainy-image" alt="">
+	</div>
+	<!-- PREALODER START -->
+	<div class="preloader-wrap">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<!-- PREALODER END -->
+	<!-- SHAPE START -->
+	<div class="shape-1"><img src="{% static 'countdown/img/shape-1.png' %}" alt="" /></div>
+	<div class="shape-2"><img src="{% static 'countdown/img/shape-2.png' %}" alt="" /></div>
+	<div class="shape-3"><img src="{% static 'countdown/img/shape-3.png' %}" alt="" /></div>
+	<!-- SHAPE END -->
+
+	<div class="bg-img color-white main-container">
+		<!-- HEADER PART START -->
+		<div id="header" class="style-1">
+			<div class="container">
+				<nav class="navbar navbar-expand-lg">
+					<a class="navbar-brand" href="/"><img src="" alt="logo here" /></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icofont icofont-navigation-menu"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="nav nav-pills mx-auto nav-style1" id="pills-tab" role="tablist">
+
+							<li class="nav-item">{% url 'index' as index %}<a class="nav-link nav-menu {% if index == request.path %} active {% endif %}" href="{{index}}">Home</a></li>
+							<li class="nav-item">{% url 'contact' as contact %}<a class="nav-link nav-menu {% if contact == request.path %} active {% endif %}" href="{{ contact }}">contact</a></li>
+							<li class="nav-item">{% url 'about' as about %}<a class="nav-link nav-menu {% if about == request.path %} active {% endif %}" href="{{ about }}">About</a></li>
+							
+						</ul>
+					</div>
+					<div class="head-contact-us">
+				<ul class="list-inline social-icons social-icons-body">
+			<li>
+				<a href="#" target="_blank" class=""><i class="icofont icofont-social-whatsapp"></i></a>
+			</li>
+			<li>
+				<a href="#" target="_blank" class=""><i class="icofont icofont-social-twitter"></i></a>
+			</li>
+			<li>
+				<a href="#" target="_blank" class=""><i class="icofont icofont-social-google-plus"></i></a>
+			</li>
+		</ul></div>
+				</nav>
+			</div>
+		</div>
+		<!-- HEADER PART END -->
+	{% block content %}
+
+	{% endblock %}
+
+	<!-- SOCIAL ICON PART START -->
+	<div class="social-icon-box text-center">
+		<ul class="list-inline social-icons social-icons-body">
+			<li>
+				<a href="#" target="_blank" class=""><i class="icofont icofont-social-whatsapp"></i></a>
+			</li>
+			<li>
+				<a href="#" target="_blank" class=""><i class="icofont icofont-social-twitter"></i></a>
+			</li>
+			<li>
+				<a href="#" target="_blank" class=""><i class="icofont icofont-social-google-plus"></i></a>
+			</li>
+		</ul>
+	</div>
+	<!-- SOCIAL ICON PART END -->
+
+		<!-- jQuery -->
+	<script src="{% static 'countdown/js/jquery-3.2.1.min.js' %}"></script>
+	<!-- Bootstrap JS -->
+	<script src="{% static 'countdown/js/bootstrap.min.js' %}"></script>
+	<!-- rainyday JS -->
+	<script src="{% static 'countdown/js/rainyday.min.js' %}"></script>
+	<!-- scripts -->
+	<script src="{% static 'countdown/js/scripts.js' %}"></script>
+	
+	<script>
+		function rain() {
+			var image = document.getElementById('rainy-image');
+			var parent = document.getElementById('rainy-parent');
+			image.onload = function() {
+				var engine = new RainyDay({
+					image: this,
+					parentElement: parent
+				});
+				engine.rain([ [3, 3, 0.88], [5, 5, 0.9], [6, 2, 1] ], 100);
+			};
+			image.crossOrigin = 'anonymous';
+			image.src = $("#rainy-image").attr("src");
+		}
+		window.addEventListener("load", rain, false);
+	</script>
+</body>
+</html>

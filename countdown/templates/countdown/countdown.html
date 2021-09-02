@@ -1,0 +1,60 @@
+{% extends 'countdown/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="notification is-toast alert alert-{{message.tags}} text-center" role="alert" style="background-color: #1DB954; color: #fff; border-radius: 6px; font-weight: 600; z-index: 1;">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+		<!-- BODY PART START -->
+		<div class="tab-content" id="pills-tabContent">
+			<!-- HOME PART -->
+			<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+				<div id="main-content-home" class="xs-no-positioning fixed fixed-middle">
+					<div>
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<div class="title">
+										<p class="small-title">Betting Tips like no other.</p>
+										<span class="main-title">We Are Coming Soon</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-sm-12 col-md-10 col-lg-7 col-xl-7">
+									<div class="counter-style1">
+										<input type="hidden" id="count-down-date" name="count-down-date" value="1 Jan, 2022 12:00:00" />
+										<h2 class="expired-text hidden">Welcome to Our Website</h2>
+										<div class="countdown-timer" id="countdown-boxes">
+											<ul class="list-inline count-down-list text-center">
+												<li id="years"><span class="years">900</span><span class="counter-time-title">Years</span></li>
+												<li id="months"><span class="months">12</span><span class="counter-time-title">Months</span></li>
+												<li id="days"><span class="days">30</span><span class="counter-time-title">Days</span></li>
+												<li id="hours"><span class="hours">24</span><span class="counter-time-title">Hours</span></li>
+												<li id="minutes"><span class="minutes">50</span><span class="counter-time-title">Minutes</span></li>
+												<li id="seconds"><span class="seconds">55</span><span class="counter-time-title">Seconds</span></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+			
+		<!-- BODY PART END -->
+	</div>
+	
+{% endblock %}
+

@@ -1,0 +1,2177 @@
+@media screen and (max-width: 1799px) {
+    .style2-nav {
+        padding: 10px 265px 10px 25px;
+    }
+    .nav-style2-main {
+        top: 25px;
+    }
+    .style2-nav .top-line {
+        top: -7px;
+        right: -20px;
+        border: 2px solid #fff;
+        border-radius: 50px 0 0 50px;
+    }
+    .style2-nav .bottom-line {
+        bottom: -7px;
+        right: -15px;
+        border: 2px solid #fff;
+        border-radius: 50px 0 0 50px;
+    }
+    .counter-style2 {
+        margin: 45px 0 65px;
+    }
+    #days .first-bg,
+    #hours .first-bg,
+    #minutes .first-bg,
+    #months .first-bg,
+    #seconds .first-bg,
+    #years .first-bg {
+        height: 115px;
+        width: 115px;
+        border-radius: 15px;
+    }
+    #days .third-bg,
+    #hours .third-bg,
+    #minutes .third-bg,
+    #months .third-bg,
+    #seconds .third-bg,
+    #years .third-bg {
+        height: 115px;
+        width: 115px;
+        border-radius: 15px;
+    }
+    #days .second-bg,
+    #hours .second-bg,
+    #minutes .second-bg,
+    #months .second-bg,
+    #seconds .second-bg,
+    #years .second-bg {
+        height: 115px;
+        width: 115px;
+        border-radius: 15px;
+    }
+    .counter-style2 .countdown-timer #days,
+    .counter-style2 .countdown-timer #hours,
+    .counter-style2 .countdown-timer #minutes,
+    .counter-style2 .countdown-timer #months,
+    .counter-style2 .countdown-timer #seconds,
+    .counter-style2 .countdown-timer #years {
+        text-align: center;
+        position: relative;
+        width: 160px;
+    }
+    .counter-style2 .countdown-timer .days,
+    .counter-style2 .countdown-timer .hours,
+    .counter-style2 .countdown-timer .minutes,
+    .counter-style2 .countdown-timer .months,
+    .counter-style2 .countdown-timer .seconds,
+    .counter-style2 .countdown-timer .years {
+        font-size: 34px;
+        line-height: 1.4;
+    }
+    .counter-style2 .count-down-list.list-inline > li {
+        padding: 26px 0;
+    }
+    .counter-style2 .countdown-timer .counter-time-title {
+        font-size: 13px;
+    }
+    .social-icon-box-style2 {
+        bottom: 17px;
+    }
+    .social-icons-style2 {
+        padding: 10px 10px 10px 265px;
+        border-radius: 0 50px 50px 0;
+    }
+    .social-icons-style2 .top-line {
+        top: -8px;
+        left: -27px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .social-icons-style2 .bottom-line {
+        bottom: -8px;
+        left: -13px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .shape-4 {
+        width: 170px;
+    }
+    #main-content-about.fixed-middle {
+        top: 50%;
+    }
+    .about_img {
+        width: 340px;
+    }
+    .border-shape {
+        top: 25px;
+        left: 25px;
+    }
+    .badge {
+        right: -80px;
+        height: 115px;
+        width: 115px;
+    }
+    .about-small-title {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    .about-main-title {
+        font-size: 38px;
+    }
+    #main-content-about .content-text p {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    .first-pera {
+        margin-top: 15px;
+    }
+    .btn-sm {
+        font-size: 14px;
+        padding: 12px 30px;
+    }
+    .shape-5 {
+        width: 170px;
+    }
+}
+@media screen and (max-width: 1599px) {
+    .head-contact-us {
+        width: 155px;
+        padding: 11px 10px;
+        font-size: 15px;
+    }
+    .small-title {
+        font-size: 14px;
+        letter-spacing: 2px;
+        line-height: 1.4;
+    }
+    .main-title {
+        font-size: 55px;
+    }
+    .counter-style1 .countdown-timer .days,
+    .counter-style1 .countdown-timer .hours,
+    .counter-style1 .countdown-timer .minutes,
+    .counter-style1 .countdown-timer .months,
+    .counter-style1 .countdown-timer .seconds,
+    .counter-style1 .countdown-timer .years {
+        font-size: 43px;
+    }
+    .counter-style1 .count-down-list.list-inline > li {
+        border: 2px solid #00b3fd;
+        padding: 30px 0;
+        border-radius: 15px;
+    }
+    .counter-style1 .count-down-list.list-inline > li::before {
+        border-radius: 10px;
+    }
+    .counter-style1 .countdown-timer .counter-time-title {
+        font-size: 12px;
+    }
+    .subscribe-form {
+        padding: 0 10px;
+    }
+    .form-inline .form-control {
+        height: 45px;
+        padding-left: 20px;
+        padding-right: 58px;
+    }
+    .form-inline .btn {
+        padding: 7px 15px;
+        font-size: 15px;
+    }
+    .shape-1 {
+        width: 165px;
+    }
+    .shape-2 {
+        width: 165px;
+    }
+    .shape-3 {
+        width: 270px;
+    }
+    .social-icons li a {
+        width: 35px;
+        height: 35px;
+        line-height: 33px;
+    }
+    .social-icon-box {
+        bottom: 12px;
+    }
+    .style2-nav {
+        padding: 10px 130px 10px 25px;
+    }
+    .nav-style2-main {
+        top: 25px;
+    }
+    .style2-nav .top-line {
+        top: -7px;
+        right: -20px;
+        border: 2px solid #fff;
+        border-radius: 50px 0 0 50px;
+    }
+    .style2-nav .bottom-line {
+        bottom: -7px;
+        right: -15px;
+        border: 2px solid #fff;
+        border-radius: 50px 0 0 50px;
+    }
+    .counter-style2 {
+        margin: 45px 0 65px;
+    }
+    #days .first-bg,
+    #hours .first-bg,
+    #minutes .first-bg,
+    #months .first-bg,
+    #seconds .first-bg,
+    #years .first-bg {
+        height: 105px;
+        width: 105px;
+        border-radius: 15px;
+    }
+    #days .third-bg,
+    #hours .third-bg,
+    #minutes .third-bg,
+    #months .third-bg,
+    #seconds .third-bg,
+    #years .third-bg {
+        height: 105px;
+        width: 105px;
+        border-radius: 15px;
+    }
+    #days .second-bg,
+    #hours .second-bg,
+    #minutes .second-bg,
+    #months .second-bg,
+    #seconds .second-bg,
+    #years .second-bg {
+        height: 105px;
+        width: 105px;
+        border-radius: 15px;
+    }
+    .counter-style2 .countdown-timer #days,
+    .counter-style2 .countdown-timer #hours,
+    .counter-style2 .countdown-timer #minutes,
+    .counter-style2 .countdown-timer #months,
+    .counter-style2 .countdown-timer #seconds,
+    .counter-style2 .countdown-timer #years {
+        text-align: center;
+        position: relative;
+        width: 140px;
+    }
+    .counter-style2 .countdown-timer .days,
+    .counter-style2 .countdown-timer .hours,
+    .counter-style2 .countdown-timer .minutes,
+    .counter-style2 .countdown-timer .months,
+    .counter-style2 .countdown-timer .seconds,
+    .counter-style2 .countdown-timer .years {
+        font-size: 30px;
+        line-height: 1.4;
+    }
+    .counter-style2 .count-down-list.list-inline > li {
+        padding: 26px 0;
+    }
+    .counter-style2 .countdown-timer .counter-time-title {
+        font-size: 12px;
+    }
+    .social-icon-box-style2 {
+        bottom: 17px;
+    }
+    .social-icons-style2 {
+        padding: 10px 10px 10px 130px;
+        border-radius: 0 50px 50px 0;
+    }
+    .social-icons-style2 .top-line {
+        top: -8px;
+        left: -27px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .social-icons-style2 .bottom-line {
+        bottom: -8px;
+        left: -13px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .shape-4 {
+        width: 140px;
+    }
+    #main-content-about.fixed-middle {
+        top: 50%;
+    }
+    .about_img {
+        width: 280px;
+    }
+    .border-shape {
+        top: 25px;
+        left: 25px;
+    }
+    .badge {
+        right: -80px;
+        height: 115px;
+        width: 115px;
+    }
+    .about-small-title {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .about-main-title {
+        font-size: 34px;
+    }
+    #main-content-about .content-text p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .first-pera {
+        margin-top: 15px;
+    }
+    .btn-sm {
+        font-size: 14px;
+        padding: 10px 30px;
+    }
+    .shape-5 {
+        width: 170px;
+    }
+}
+@media screen and (max-width: 1399px) {
+    .head-contact-us {
+        width: 155px;
+        padding: 11px 10px;
+        font-size: 15px;
+    }
+    .small-title {
+        font-size: 14px;
+        letter-spacing: 2px;
+        line-height: 1.4;
+    }
+    .main-title {
+        font-size: 55px;
+    }
+
+    .counter-style1 .countdown-timer #days,
+    .counter-style1 .countdown-timer #hours,
+    .counter-style1 .countdown-timer #minutes,
+    .counter-style1 .countdown-timer #months,
+    .counter-style1 .countdown-timer #seconds,
+    .counter-style1 .countdown-timer #years {
+        width: 22%;
+        margin: 0px 3px;
+    }
+
+
+    .counter-style1 .countdown-timer .days,
+    .counter-style1 .countdown-timer .hours,
+    .counter-style1 .countdown-timer .minutes,
+    .counter-style1 .countdown-timer .months,
+    .counter-style1 .countdown-timer .seconds,
+    .counter-style1 .countdown-timer .years {
+        font-size: 43px;
+    }
+    .counter-style1 .count-down-list.list-inline > li {
+        border: 2px solid #00b3fd;
+        padding: 20px 0;
+        border-radius: 15px;
+    }
+    .counter-style1 .countdown-timer .counter-time-title {
+        font-size: 12px;
+    }
+    .subscribe-form {
+        padding: 0 10px;
+    }
+    .form-inline .form-control {
+        height: 45px;
+        padding-left: 20px;
+        padding-right: 58px;
+    }
+    .form-inline .btn {
+        padding: 7px 15px;
+        font-size: 15px;
+    }
+    .shape-1 {
+        width: 165px;
+    }
+    .shape-2 {
+        width: 165px;
+    }
+    .shape-3 {
+        width: 270px;
+    }
+    .social-icons li a {
+        width: 35px;
+        height: 35px;
+        line-height: 33px;
+    }
+    .social-icon-box {
+        bottom: 12px;
+    }
+    .nav-style2-main {
+        top: 25px;
+    }
+    .style2-nav .top-line {
+        top: -7px;
+        right: -20px;
+        border: 2px solid #fff;
+        border-radius: 50px 0 0 50px;
+    }
+    .style2-nav .bottom-line {
+        bottom: -7px;
+        right: -15px;
+        border: 2px solid #fff;
+        border-radius: 50px 0 0 50px;
+    }
+    .counter-style2 {
+        margin: 45px 0 65px;
+    }
+    #days .first-bg,
+    #hours .first-bg,
+    #minutes .first-bg,
+    #months .first-bg,
+    #seconds .first-bg,
+    #years .first-bg {
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+    }
+    #days .third-bg,
+    #hours .third-bg,
+    #minutes .third-bg,
+    #months .third-bg,
+    #seconds .third-bg,
+    #years .third-bg {
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+    }
+    #days .second-bg,
+    #hours .second-bg,
+    #minutes .second-bg,
+    #months .second-bg,
+    #seconds .second-bg,
+    #years .second-bg {
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+    }
+    .counter-style2 .countdown-timer #days,
+    .counter-style2 .countdown-timer #hours,
+    .counter-style2 .countdown-timer #minutes,
+    .counter-style2 .countdown-timer #months,
+    .counter-style2 .countdown-timer #seconds,
+    .counter-style2 .countdown-timer #years {
+        text-align: center;
+        position: relative;
+        width: 130px;
+    }
+    .counter-style2 .countdown-timer .days,
+    .counter-style2 .countdown-timer .hours,
+    .counter-style2 .countdown-timer .minutes,
+    .counter-style2 .countdown-timer .months,
+    .counter-style2 .countdown-timer .seconds,
+    .counter-style2 .countdown-timer .years {
+        font-size: 30px;
+        line-height: 1.4;
+    }
+    .counter-style2 .count-down-list.list-inline > li {
+        padding: 26px 0;
+    }
+    .counter-style2 .countdown-timer .counter-time-title {
+        font-size: 12px;
+    }
+    .social-icon-box-style2 {
+        bottom: 17px;
+    }
+    .social-icons-style2 {
+        padding: 10px 10px 10px 130px;
+        border-radius: 0 50px 50px 0;
+    }
+    .social-icons-style2 .top-line {
+        top: -8px;
+        left: -27px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .social-icons-style2 .bottom-line {
+        bottom: -8px;
+        left: -13px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .shape-4 {
+        width: 140px;
+    }
+    #main-content-about.fixed-middle {
+        top: 50%;
+    }
+    .about_img {
+        width: 260px;
+    }
+    .border-shape {
+        top: 25px;
+        left: 25px;
+    }
+    .badge {
+        right: -80px;
+        height: 115px;
+        width: 115px;
+    }
+    .about-small-title {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .about-main-title {
+        font-size: 34px;
+    }
+    #main-content-about .content-text p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .first-pera {
+        margin-top: 15px;
+    }
+    .btn-sm {
+        font-size: 14px;
+        padding: 12px 30px;
+    }
+
+    .contact-btn {
+        margin-top: 20px;
+    }
+
+    .shape-5 {
+        width: 170px;
+    }
+    #main-content-contact.fixed-middle {
+        top: 50%;
+    }
+    .contact-small-title {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .contact-main-title {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    .form-field {
+        margin-bottom: 10px;
+    }
+    textarea.form-control {
+        border-radius: 10px;
+        height: 115px;
+    }
+    #contact-form .btn {
+        font-size: 13px;
+        padding: 9.5px 30px;
+    }
+}
+@media screen and (max-width: 1299px) {
+    .head-contact-us {
+        width: 155px;
+        padding: 11px 10px;
+        font-size: 15px;
+    }
+    .small-title {
+        font-size: 14px;
+        letter-spacing: 2px;
+        line-height: 1.4;
+    }
+    .main-title {
+        font-size: 50px;
+    }
+
+    .counter-style1 .countdown-timer #days,
+    .counter-style1 .countdown-timer #hours,
+    .counter-style1 .countdown-timer #minutes,
+    .counter-style1 .countdown-timer #months,
+    .counter-style1 .countdown-timer #seconds,
+    .counter-style1 .countdown-timer #years {
+        width: 22%;
+        margin: 0px 3px;
+    }
+
+
+    .counter-style1 .countdown-timer .days,
+    .counter-style1 .countdown-timer .hours,
+    .counter-style1 .countdown-timer .minutes,
+    .counter-style1 .countdown-timer .months,
+    .counter-style1 .countdown-timer .seconds,
+    .counter-style1 .countdown-timer .years {
+        font-size: 40px;
+    }
+    .counter-style1 .count-down-list.list-inline > li {
+        border: 2px solid #00b3fd;
+        padding: 25px 0;
+        border-radius: 15px;
+    }
+    .counter-style1 .countdown-timer .counter-time-title {
+        font-size: 12px;
+    }
+    .subscribe-form {
+        padding: 0 10px;
+    }
+    .form-inline .form-control {
+        height: 47px;
+        padding-left: 30px;
+        padding-right: 100px;
+    }
+    .form-inline .btn {
+        padding: 9px 20px;
+        font-size: 12px;
+    }
+    .shape-1 {
+        width: 165px;
+    }
+    .shape-2 {
+        width: 165px;
+    }
+    .shape-3 {
+        width: 270px;
+    }
+    .social-icons li a {
+        width: 35px;
+        height: 35px;
+        line-height: 33px;
+    }
+    .social-icon-box {
+        bottom: 12px;
+    }
+    .style2-nav {
+        padding: 10px 130px 10px 25px;
+    }
+    .nav-style2-main {
+        top: 25px;
+    }
+    .style2-nav .top-line {
+        top: -7px;
+        right: -20px;
+        border: 2px solid #fff;
+        border-radius: 50px 0 0 50px;
+    }
+    .style2-nav .bottom-line {
+        bottom: -7px;
+        right: -15px;
+        border: 2px solid #fff;
+        border-radius: 50px 0 0 50px;
+    }
+    .counter-style2 {
+        margin: 45px 0 65px;
+    }
+    #days .first-bg,
+    #hours .first-bg,
+    #minutes .first-bg,
+    #months .first-bg,
+    #seconds .first-bg,
+    #years .first-bg {
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+    }
+    #days .third-bg,
+    #hours .third-bg,
+    #minutes .third-bg,
+    #months .third-bg,
+    #seconds .third-bg,
+    #years .third-bg {
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+    }
+    #days .second-bg,
+    #hours .second-bg,
+    #minutes .second-bg,
+    #months .second-bg,
+    #seconds .second-bg,
+    #years .second-bg {
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+    }
+    .counter-style2 .countdown-timer #days,
+    .counter-style2 .countdown-timer #hours,
+    .counter-style2 .countdown-timer #minutes,
+    .counter-style2 .countdown-timer #months,
+    .counter-style2 .countdown-timer #seconds,
+    .counter-style2 .countdown-timer #years {
+        text-align: center;
+        position: relative;
+        width: 110px;
+    }
+    .counter-style2 .countdown-timer .days,
+    .counter-style2 .countdown-timer .hours,
+    .counter-style2 .countdown-timer .minutes,
+    .counter-style2 .countdown-timer .months,
+    .counter-style2 .countdown-timer .seconds,
+    .counter-style2 .countdown-timer .years {
+        font-size: 30px;
+        line-height: 1.4;
+    }
+    .counter-style2 .count-down-list.list-inline > li {
+        padding: 26px 0;
+    }
+    .counter-style2 .countdown-timer .counter-time-title {
+        font-size: 12px;
+    }
+    .social-icon-box-style2 {
+        bottom: 17px;
+    }
+    .social-icons-style2 {
+        padding: 10px 10px 10px 130px;
+        border-radius: 0 50px 50px 0;
+    }
+    .social-icons-style2 .top-line {
+        top: -8px;
+        left: -27px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .social-icons-style2 .bottom-line {
+        bottom: -8px;
+        left: -13px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .shape-4 {
+        width: 130px;
+    }
+    #main-content-about.fixed-middle {
+        top: 50%;
+    }
+    .about_img {
+        width: 280px;
+    }
+    .border-shape {
+        top: 25px;
+        left: 25px;
+    }
+    .badge {
+        right: -80px;
+        height: 115px;
+        width: 115px;
+    }
+    .about-small-title {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .about-main-title {
+        font-size: 30px;
+    }
+    #main-content-about .content-text p {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+    .first-pera {
+        margin-top: 15px;
+    }
+    .btn-sm {
+        font-size: 13px;
+        padding: 10px 30px;
+    }
+    .shape-5 {
+        width: 170px;
+    }
+    .contact-small-title {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .contact-main-title {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    .form-field {
+        margin-bottom: 10px;
+    }
+    textarea.form-control {
+        border-radius: 10px;
+        height: 115px;
+    }
+    #contact-form .btn {
+        font-size: 13px;
+        padding: 9.5px 30px;
+    }
+}
+@media screen and (max-width: 1199px) {
+    .head-contact-us {
+        width: 155px;
+        padding: 11px 10px;
+        font-size: 15px;
+    }
+    .small-title {
+        font-size: 14px;
+        letter-spacing: 2px;
+        line-height: 1.4;
+    }
+    .main-title {
+        font-size: 50px;
+    }
+
+    .counter-style1 .countdown-timer #days,
+    .counter-style1 .countdown-timer #hours,
+    .counter-style1 .countdown-timer #minutes,
+    .counter-style1 .countdown-timer #months,
+    .counter-style1 .countdown-timer #seconds,
+    .counter-style1 .countdown-timer #years {
+        width: 22%;
+        margin: 0px 3px;
+    }
+
+    .counter-style1 .countdown-timer .days,
+    .counter-style1 .countdown-timer .hours,
+    .counter-style1 .countdown-timer .minutes,
+    .counter-style1 .countdown-timer .months,
+    .counter-style1 .countdown-timer .seconds,
+    .counter-style1 .countdown-timer .years {
+        font-size: 40px;
+    }
+    .counter-style1 .count-down-list.list-inline > li {
+        border: 2px solid #00b3fd;
+        padding: 25px 0;
+        border-radius: 15px;
+    }
+    .counter-style1 .countdown-timer .counter-time-title {
+        font-size: 12px;
+    }
+    .subscribe-form {
+        padding: 0 10px;
+    }
+    .form-inline .form-control {
+        height: 45px;
+        padding-left: 20px;
+        padding-right: 58px;
+    }
+    .form-inline .btn {
+        padding: 7px 15px;
+    }
+    .shape-1 {
+        width: 165px;
+    }
+    .shape-2 {
+        width: 165px;
+    }
+    .shape-3 {
+        width: 270px;
+    }
+    .social-icons li a {
+        width: 35px;
+        height: 35px;
+        line-height: 33px;
+    }
+    .social-icon-box {
+        bottom: 12px;
+    }
+    .style2-nav {
+        padding: 10px 130px 10px 25px;
+    }
+    .nav-style2-main {
+        top: 25px;
+    }
+    .style2-nav .top-line {
+        top: -7px;
+        right: -20px;
+        border: 2px solid #fff;
+        border-radius: 50px 0 0 50px;
+    }
+    .style2-nav .bottom-line {
+        bottom: -7px;
+        right: -15px;
+        border: 2px solid #fff;
+        border-radius: 50px 0 0 50px;
+    }
+    .counter-style2 {
+        margin: 40px 0 60px;
+    }
+    #days .first-bg,
+    #hours .first-bg,
+    #minutes .first-bg,
+    #months .first-bg,
+    #seconds .first-bg,
+    #years .first-bg {
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+    }
+    #days .third-bg,
+    #hours .third-bg,
+    #minutes .third-bg,
+    #months .third-bg,
+    #seconds .third-bg,
+    #years .third-bg {
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+    }
+    #days .second-bg,
+    #hours .second-bg,
+    #minutes .second-bg,
+    #months .second-bg,
+    #seconds .second-bg,
+    #years .second-bg {
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+    }
+    .counter-style2 .countdown-timer #days,
+    .counter-style2 .countdown-timer #hours,
+    .counter-style2 .countdown-timer #minutes,
+    .counter-style2 .countdown-timer #months,
+    .counter-style2 .countdown-timer #seconds,
+    .counter-style2 .countdown-timer #years {
+        text-align: center;
+        position: relative;
+        width: 115px;
+    }
+    .counter-style2 .countdown-timer .days,
+    .counter-style2 .countdown-timer .hours,
+    .counter-style2 .countdown-timer .minutes,
+    .counter-style2 .countdown-timer .months,
+    .counter-style2 .countdown-timer .seconds,
+    .counter-style2 .countdown-timer .years {
+        font-size: 27px;
+        line-height: 1.4;
+    }
+    .counter-style2 .count-down-list.list-inline > li {
+        padding: 26px 0;
+    }
+    .counter-style2 .countdown-timer .counter-time-title {
+        font-size: 12px;
+    }
+    .social-icon-box-style2 {
+        bottom: 17px;
+    }
+    .social-icons-style2 {
+        padding: 10px 10px 10px 130px;
+        border-radius: 0 50px 50px 0;
+    }
+    .social-icons-style2 .top-line {
+        top: -8px;
+        left: -27px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .social-icons-style2 .bottom-line {
+        bottom: -8px;
+        left: -13px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .shape-4 {
+        width: 130px;
+    }
+    .contact-small-title {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .contact-main-title {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    .form-field {
+        margin-bottom: 10px;
+    }
+    textarea.form-control {
+        border-radius: 10px;
+        height: 115px;
+    }
+    #contact-form .btn {
+        font-size: 13px;
+        padding: 9.5px 30px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .navbar {
+        background-color: #0d3373;
+        z-index: 9;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navbar-brand {
+        width: 110px;
+    }
+    .nav-style1 {
+        border-color: transparent;
+        padding: 4px 0;
+        border-radius: 50px;
+    }
+    .nav-menu {
+        margin: 0;
+    }
+    .style-1 .nav-menu::before {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 130%;
+        width: 20px;
+    }
+    .style-1 .nav-menu::after {
+        display: none;
+    }
+    .style-1 .nav-item:hover .nav-menu::before {
+        height: 1.2px;
+    }
+    .style-1 .nav-item:hover .nav-menu::after {
+        height: 1.2px;
+    }
+    .style-1 .active.nav-menu::before {
+        height: 1.2px;
+    }
+    .style-1 .active.nav-menu::after {
+        height: 1.2px;
+    }
+    .head-contact-us {
+        display: none;
+    }
+    .nav-item {
+        margin: 0 auto 0 0;
+    }
+    .head-contact-title {
+        font-size: 11px;
+        color: #fc730a;
+        font-weight: 700;
+        display: block;
+    }
+    .head-contact-no {
+        font-size: 18px;
+        color: #fff;
+        font-weight: 700;
+        display: block;
+    }
+    .small-title {
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 1.4;
+    }
+    .main-title {
+        font-size: 54px;
+    }
+    .counter-style1 .count-down-list.list-inline > li::before {
+        border-radius: 13px;
+    }
+    .counter-style1 .countdown-timer #days,
+    .counter-style1 .countdown-timer #hours,
+    .counter-style1 .countdown-timer #minutes,
+    .counter-style1 .countdown-timer #months,
+    .counter-style1 .countdown-timer #seconds,
+    .counter-style1 .countdown-timer #years {
+        width: 22%;
+        margin: 0px 3px;
+    }
+    .counter-style1 .countdown-timer .days,
+    .counter-style1 .countdown-timer .hours,
+    .counter-style1 .countdown-timer .minutes,
+    .counter-style1 .countdown-timer .months,
+    .counter-style1 .countdown-timer .seconds,
+    .counter-style1 .countdown-timer .years {
+        font-size: 38px;
+    }
+    .counter-style1 .count-down-list.list-inline > li {
+        border: 1.5px solid #00b3fd;
+        padding: 20px 0;
+        border-radius: 15px;
+    }
+    .counter-style1 .countdown-timer .counter-time-title {
+        font-size: 12px;
+    }
+    .subscribe-form {
+        padding: 0 10px;
+    }
+    .form-inline .form-control {
+        height: 45px;
+        padding-left: 20px;
+        padding-right: 58px;
+    }
+    .form-inline .btn {
+        padding: 7px 15px;
+    }
+    .shape-1 {
+        width: 110px;
+    }
+    .shape-2 {
+        width: 110px;
+    }
+    .shape-3 {
+        width: 230px;
+    }
+    .social-icons li a {
+        width: 30px;
+        height: 30px;
+        line-height: 28px;
+    }
+    .social-icon-box {
+        bottom: 12px;
+    }
+    .nav-style2-main {
+        display: none;
+    }
+    .secondary-navbar {
+        visibility: visible;
+    }
+    .counter-style2 {
+        margin: 40px 0 60px;
+    }
+    #days .first-bg,
+    #hours .first-bg,
+    #minutes .first-bg,
+    #months .first-bg,
+    #seconds .first-bg,
+    #years .first-bg {
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+    }
+    #days .third-bg,
+    #hours .third-bg,
+    #minutes .third-bg,
+    #months .third-bg,
+    #seconds .third-bg,
+    #years .third-bg {
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+    }
+    #days .second-bg,
+    #hours .second-bg,
+    #minutes .second-bg,
+    #months .second-bg,
+    #seconds .second-bg,
+    #years .second-bg {
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+    }
+    .counter-style2 .countdown-timer #days,
+    .counter-style2 .countdown-timer #hours,
+    .counter-style2 .countdown-timer #minutes,
+    .counter-style2 .countdown-timer #months,
+    .counter-style2 .countdown-timer #seconds,
+    .counter-style2 .countdown-timer #years {
+        text-align: center;
+        position: relative;
+        width: 115px;
+    }
+    .counter-style2 .countdown-timer .days,
+    .counter-style2 .countdown-timer .hours,
+    .counter-style2 .countdown-timer .minutes,
+    .counter-style2 .countdown-timer .months,
+    .counter-style2 .countdown-timer .seconds,
+    .counter-style2 .countdown-timer .years {
+        font-size: 27px;
+        line-height: 1.4;
+    }
+    .counter-style2 .count-down-list.list-inline > li {
+        padding: 26px 0;
+    }
+    .counter-style2 .countdown-timer .counter-time-title {
+        font-size: 12px;
+    }
+    .social-icon-box-style2 {
+        bottom: 17px;
+    }
+    .social-icons-style2 {
+        padding: 10px 10px 10px 130px;
+        border-radius: 0 50px 50px 0;
+    }
+    .social-icons-style2 .top-line {
+        top: -8px;
+        left: -27px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .social-icons-style2 .bottom-line {
+        bottom: -8px;
+        left: -13px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .shape-4 {
+        width: 120px;
+    }
+    #main-content-about.fixed-middle {
+        top: 50%;
+    }
+    .about_img {
+        width: 240px;
+    }
+    .border-shape {
+        top: 20px;
+        left: 20px;
+    }
+    .badge {
+        right: -69px;
+        height: 100px;
+        width: 100px;
+    }
+    .about-small-title {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .about-main-title {
+        font-size: 26px;
+    }
+    #main-content-about .content-text p {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    .first-pera {
+        margin-top: 15px;
+    }
+    .btn-sm {
+        font-size: 12px;
+        padding: 9px 24px;
+    }
+    .shape-5 {
+        width: 130px;
+    }
+    .contact-small-title {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .contact-main-title {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    .form-field {
+        margin-bottom: 10px;
+    }
+    textarea.form-control {
+        border-radius: 10px;
+        height: 115px;
+    }
+    #contact-form .btn {
+        font-size: 13px;
+        padding: 9.5px 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .navbar {
+        background-color: #0d3373;
+        z-index: 9;
+    }
+    .nav-style1 {
+        border-color: transparent;
+        padding: 4px 0;
+        border-radius: 50px;
+    }
+    .nav-menu {
+        margin: 0;
+    }
+    .style-1 .nav-menu::before {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 130%;
+        width: 20px;
+    }
+    .style-1 .nav-menu::after {
+        display: none;
+    }
+    .style-1 .nav-item:hover .nav-menu::before {
+        height: 1.2px;
+    }
+    .style-1 .nav-item:hover .nav-menu::after {
+        height: 1.2px;
+    }
+    .style-1 .active.nav-menu::before {
+        height: 1.2px;
+    }
+    .style-1 .active.nav-menu::after {
+        height: 1.2px;
+    }
+    .head-contact-us {
+        display: none;
+    }
+    .small-title {
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 1.4;
+    }
+    .main-title {
+        font-size: 46px;
+    }
+    .counter-style1 .count-down-list.list-inline > li::before {
+        border-radius: 13px;
+    }
+    .counter-style1 .countdown-timer #days,
+    .counter-style1 .countdown-timer #hours,
+    .counter-style1 .countdown-timer #minutes,
+    .counter-style1 .countdown-timer #months,
+    .counter-style1 .countdown-timer #seconds,
+    .counter-style1 .countdown-timer #years {
+        width: 22%;
+        margin: 0px 3px;
+    }
+    .counter-style1 .countdown-timer .days,
+    .counter-style1 .countdown-timer .hours,
+    .counter-style1 .countdown-timer .minutes,
+    .counter-style1 .countdown-timer .months,
+    .counter-style1 .countdown-timer .seconds,
+    .counter-style1 .countdown-timer .years {
+        font-size: 38px;
+    }
+    .counter-style1 .count-down-list.list-inline > li {
+        border: 1.5px solid #00b3fd;
+        padding: 20px 0;
+    }
+    .counter-style1 .countdown-timer .counter-time-title {
+        font-size: 12px;
+    }
+    .subscribe-form {
+        padding: 0 10px;
+    }
+    .form-inline .form-control {
+        height: 45px;
+        padding-left: 20px;
+        padding-right: 58px;
+    }
+    .form-inline .btn {
+        padding: 7px 15px;
+    }
+    .shape-1 {
+        width: 110px;
+    }
+    .shape-2 {
+        width: 110px;
+    }
+    .shape-3 {
+        width: 230px;
+    }
+    .social-icons li a {
+        width: 30px;
+        height: 30px;
+        line-height: 28px;
+    }
+    .social-icon-box {
+        bottom: 12px;
+    }
+    .counter-style2 {
+        margin: 20px 0 30px;
+    }
+    #days .first-bg,
+    #hours .first-bg,
+    #minutes .first-bg,
+    #months .first-bg,
+    #seconds .first-bg,
+    #years .first-bg {
+        height: 90px;
+        width: 90px;
+        border-radius: 8px;
+    }
+    #days .third-bg,
+    #hours .third-bg,
+    #minutes .third-bg,
+    #months .third-bg,
+    #seconds .third-bg,
+    #years .third-bg {
+        height: 90px;
+        width: 90px;
+        border-radius: 8px;
+    }
+    #days .second-bg,
+    #hours .second-bg,
+    #minutes .second-bg,
+    #months .second-bg,
+    #seconds .second-bg,
+    #years .second-bg {
+        height: 90px;
+        width: 90px;
+        border-radius: 8px;
+    }
+    .counter-style2 .countdown-timer #days,
+    .counter-style2 .countdown-timer #hours,
+    .counter-style2 .countdown-timer #minutes,
+    .counter-style2 .countdown-timer #months,
+    .counter-style2 .countdown-timer #seconds,
+    .counter-style2 .countdown-timer #years {
+        text-align: center;
+        position: relative;
+        width: 100px;
+    }
+    .counter-style2 .countdown-timer .days,
+    .counter-style2 .countdown-timer .hours,
+    .counter-style2 .countdown-timer .minutes,
+    .counter-style2 .countdown-timer .months,
+    .counter-style2 .countdown-timer .seconds,
+    .counter-style2 .countdown-timer .years {
+        font-size: 27px;
+        line-height: 1.4;
+    }
+    .counter-style2 .count-down-list.list-inline > li {
+        padding: 26px 0;
+    }
+    .counter-style2 .countdown-timer .counter-time-title {
+        font-size: 12px;
+    }
+    .social-icon-box-style2 {
+        bottom: 17px;
+    }
+    .social-icons-style2 {
+        padding: 10px 10px 10px 100px;
+        border-radius: 0 50px 50px 0;
+    }
+    .social-icons-style2 .top-line {
+        top: -8px;
+        left: -27px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .social-icons-style2 .bottom-line {
+        bottom: -8px;
+        left: -13px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .shape-4 {
+        width: 120px;
+    }
+    #main-content-about.fixed-middle {
+        top: 50%;
+    }
+    .about_img {
+        display: none;
+    }
+    .about-small-title {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .about-main-title {
+        font-size: 28px;
+    }
+    #main-content-about .content-text p {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .first-pera {
+        margin-top: 10px;
+    }
+    .btn-sm {
+        font-size: 12px;
+        padding: 9px 24px;
+    }
+    .shape-5 {
+        width: 130px;
+    }
+
+    #main-content-contact.fixed-middle {
+        top: 55%;
+    }
+
+    .contact-small-title {
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0;
+    }
+    .contact-main-title {
+        font-size: 36px;
+        margin-bottom: 5px;
+    }
+
+    .form-control {
+        height: 43px;
+    }
+
+    .form-field {
+        margin-bottom: 5px;
+    }
+    textarea.form-control {
+        border-radius: 10px;
+        height: 115px;
+    }
+    #contact-form .btn {
+        font-size: 13px;
+        padding: 9.5px 30px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .navbar {
+        background-color: #0d3373;
+        z-index: 9;
+    }
+    .nav-style1 {
+        border-color: transparent;
+        padding: 4px 0;
+        border-radius: 50px;
+    }
+    .nav-menu {
+        margin: 0;
+    }
+    .style-1 .nav-menu::before {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 130%;
+        width: 20px;
+    }
+    .style-1 .nav-menu::after {
+        display: none;
+    }
+    .style-1 .nav-item:hover .nav-menu::before {
+        height: 1.2px;
+    }
+    .style-1 .nav-item:hover .nav-menu::after {
+        height: 1.2px;
+    }
+    .style-1 .active.nav-menu::before {
+        height: 1.2px;
+    }
+    .style-1 .active.nav-menu::after {
+        height: 1.2px;
+    }
+    .head-contact-us {
+        display: none;
+    }
+    .small-title {
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 1.4;
+    }
+    .main-title {
+        font-size: 38px;
+    }
+    .counter-style1 .count-down-list.list-inline > li::before {
+        border-radius: 10px;
+    }
+    .counter-style1 .countdown-timer #days,
+    .counter-style1 .countdown-timer #hours,
+    .counter-style1 .countdown-timer #minutes,
+    .counter-style1 .countdown-timer #months,
+    .counter-style1 .countdown-timer #seconds,
+    .counter-style1 .countdown-timer #years {
+        width: 22%;
+        margin: 0px 0px;
+    }
+    .counter-style1 .countdown-timer .days,
+    .counter-style1 .countdown-timer .hours,
+    .counter-style1 .countdown-timer .minutes,
+    .counter-style1 .countdown-timer .months,
+    .counter-style1 .countdown-timer .seconds,
+    .counter-style1 .countdown-timer .years {
+        font-size: 28px;
+    }
+    .counter-style1 .count-down-list.list-inline > li {
+        border: 1.5px solid #00b3fd;
+        padding: 20px 0;
+        border-radius: 12px;
+    }
+    .counter-style1 .countdown-timer .counter-time-title {
+        font-size: 12px;
+    }
+    .subscribe-form {
+        padding: 0 10px;
+    }
+    .form-inline .form-control {
+        height: 45px;
+        padding-left: 20px;
+        padding-right: 58px;
+    }
+    .form-inline .btn {
+        padding: 7px 15px;
+    }
+    .shape-1 {
+        width: 80px;
+    }
+    .shape-2 {
+        width: 80px;
+    }
+    .shape-3 {
+        width: 180px;
+    }
+    .social-icons li a {
+        width: 25px;
+        height: 25px;
+        line-height: 23px;
+    }
+    .social-icon-box {
+        bottom: 6px;
+    }
+    .counter-style2 {
+        margin: 20px 0 30px;
+    }
+    #days .first-bg,
+    #hours .first-bg,
+    #minutes .first-bg,
+    #months .first-bg,
+    #seconds .first-bg,
+    #years .first-bg {
+        height: 80px;
+        width: 80px;
+        border-radius: 8px;
+    }
+    #days .third-bg,
+    #hours .third-bg,
+    #minutes .third-bg,
+    #months .third-bg,
+    #seconds .third-bg,
+    #years .third-bg {
+        height: 80px;
+        width: 80px;
+        border-radius: 8px;
+    }
+    #days .second-bg,
+    #hours .second-bg,
+    #minutes .second-bg,
+    #months .second-bg,
+    #seconds .second-bg,
+    #years .second-bg {
+        height: 80px;
+        width: 80px;
+        border-radius: 8px;
+    }
+    .counter-style2 .countdown-timer #days,
+    .counter-style2 .countdown-timer #hours,
+    .counter-style2 .countdown-timer #minutes,
+    .counter-style2 .countdown-timer #months,
+    .counter-style2 .countdown-timer #seconds,
+    .counter-style2 .countdown-timer #years {
+        text-align: center;
+        position: relative;
+        width: 80px;
+    }
+    .counter-style2 .countdown-timer .days,
+    .counter-style2 .countdown-timer .hours,
+    .counter-style2 .countdown-timer .minutes,
+    .counter-style2 .countdown-timer .months,
+    .counter-style2 .countdown-timer .seconds,
+    .counter-style2 .countdown-timer .years {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+    .counter-style2 .count-down-list.list-inline > li {
+        padding: 26px 0;
+    }
+    .counter-style2 .countdown-timer .counter-time-title {
+        font-size: 10px;
+    }
+    .social-icon-box-style2 {
+        bottom: 17px;
+    }
+    .social-icons-style2 {
+        padding: 8px 9px 8px 19px;
+        border-radius: 0 50px 50px 0;
+    }
+    .social-icons-style2 .top-line {
+        top: -8px;
+        left: -27px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .social-icons-style2 .bottom-line {
+        bottom: -8px;
+        left: -13px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .shape-4 {
+        width: 90px;
+    }
+    #main-content-about.fixed-middle {
+        top: 55%;
+    }
+    .about_img {
+        display: none;
+    }
+    .about-small-title {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .about-main-title {
+        font-size: 28px;
+    }
+    #main-content-about .content-text p {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .first-pera {
+        margin-top: 10px;
+    }
+    .btn-sm {
+        font-size: 12px;
+        padding: 9px 24px;
+    }
+    .shape-5 {
+        width: 130px;
+    }
+    .contact-small-title {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .form-field {
+        margin-bottom: 5px;
+    }
+    textarea.form-control {
+        border-radius: 10px;
+        height: 115px;
+    }
+    #contact-form .btn {
+        font-size: 13px;
+        padding: 9.5px 30px;
+    }
+    .form-control {
+        height: 40px;
+    }
+}
+@media screen and (max-width: 491px) {
+    .navbar {
+        background-color: #0d3373;
+        z-index: 9;
+    }
+    .nav-style1 {
+        border-color: transparent;
+        padding: 4px 0;
+        border-radius: 50px;
+    }
+    .nav-menu {
+        margin: 0;
+    }
+    .style-1 .nav-menu::before {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 130%;
+        width: 20px;
+    }
+    .style-1 .nav-menu::after {
+        display: none;
+    }
+    .style-1 .nav-item:hover .nav-menu::before {
+        height: 1.2px;
+    }
+    .style-1 .nav-item:hover .nav-menu::after {
+        height: 1.2px;
+    }
+    .style-1 .active.nav-menu::before {
+        height: 1.2px;
+    }
+    .style-1 .active.nav-menu::after {
+        height: 1.2px;
+    }
+    .head-contact-us {
+        display: none;
+    }
+    .small-title {
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 1.2;
+    }
+    .main-title {
+        font-size: 28px;
+    }
+    .counter-style1 .count-down-list.list-inline > li::before {
+        border-radius: 3px;
+    }
+    .counter-style1 .countdown-timer #days,
+    .counter-style1 .countdown-timer #hours,
+    .counter-style1 .countdown-timer #minutes,
+    .counter-style1 .countdown-timer #months,
+    .counter-style1 .countdown-timer #seconds,
+    .counter-style1 .countdown-timer #years {
+        width: 22%;
+        margin: 0px 0px;
+    }
+    .counter-style1 .countdown-timer .days,
+    .counter-style1 .countdown-timer .hours,
+    .counter-style1 .countdown-timer .minutes,
+    .counter-style1 .countdown-timer .months,
+    .counter-style1 .countdown-timer .seconds,
+    .counter-style1 .countdown-timer .years {
+        font-size: 24px;
+    }
+    .counter-style1 .count-down-list.list-inline > li {
+        border: 1.5px solid #00b3fd;
+        padding: 15px 0;
+        border-radius: 5px;
+    }
+    .counter-style1 .countdown-timer .counter-time-title {
+        font-size: 10px;
+    }
+    .subscribe-form {
+        padding: 0 10px;
+    }
+    .form-inline .form-control {
+        height: 45px;
+        padding-left: 20px;
+        padding-right: 58px;
+    }
+    .form-inline .btn {
+        padding: 7px 15px;
+    }
+    .form-inline .btn .btn-icon {
+        display: block;
+        font-size: 24px;
+    }
+    .form-inline .btn .btn-text {
+        display: none;
+    }
+    .shape-1 {
+        width: 80px;
+    }
+    .shape-2 {
+        width: 80px;
+    }
+    .shape-3 {
+        width: 180px;
+    }
+    .social-icons li a {
+        width: 25px;
+        height: 25px;
+        line-height: 23px;
+    }
+    .social-icon-box {
+        bottom: 6px;
+    }
+    .counter-style2 {
+        margin: 20px 0 30px;
+    }
+    #days .first-bg,
+    #hours .first-bg,
+    #minutes .first-bg,
+    #months .first-bg,
+    #seconds .first-bg,
+    #years .first-bg {
+        height: 70px;
+        width: 70px;
+        border-radius: 8px;
+    }
+    #days .third-bg,
+    #hours .third-bg,
+    #minutes .third-bg,
+    #months .third-bg,
+    #seconds .third-bg,
+    #years .third-bg {
+        height: 70px;
+        width: 70px;
+        border-radius: 8px;
+    }
+    #days .second-bg,
+    #hours .second-bg,
+    #minutes .second-bg,
+    #months .second-bg,
+    #seconds .second-bg,
+    #years .second-bg {
+        height: 70px;
+        width: 70px;
+        border-radius: 8px;
+    }
+    .counter-style2 .countdown-timer #days,
+    .counter-style2 .countdown-timer #hours,
+    .counter-style2 .countdown-timer #minutes,
+    .counter-style2 .countdown-timer #months,
+    .counter-style2 .countdown-timer #seconds,
+    .counter-style2 .countdown-timer #years {
+        text-align: center;
+        position: relative;
+        width: 65px;
+    }
+    .counter-style2 .countdown-timer .days,
+    .counter-style2 .countdown-timer .hours,
+    .counter-style2 .countdown-timer .minutes,
+    .counter-style2 .countdown-timer .months,
+    .counter-style2 .countdown-timer .seconds,
+    .counter-style2 .countdown-timer .years {
+        font-size: 18px;
+    }
+    .counter-style2 .count-down-list.list-inline > li {
+        padding: 26px 0;
+    }
+    .counter-style2 .countdown-timer .counter-time-title {
+        font-size: 10px;
+    }
+    .social-icon-box-style2 {
+        bottom: 17px;
+    }
+    .social-icons-style2 {
+        padding: 8px 9px 8px 19px;
+        border-radius: 0 50px 50px 0;
+    }
+    .social-icons-style2 .top-line {
+        top: -8px;
+        left: -27px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .social-icons-style2 .bottom-line {
+        bottom: -8px;
+        left: -13px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .shape-4 {
+        width: 90px;
+    }
+    #main-content-about.fixed-middle {
+        top: 55%;
+    }
+    .about_img {
+        display: none;
+    }
+    .about-small-title {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .about-main-title {
+        font-size: 20px;
+    }
+    #main-content-about .content-text p {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+    .first-pera {
+        margin-top: 10px;
+    }
+    .btn-sm {
+        font-size: 12px;
+        padding: 9px 24px;
+    }
+    .shape-5 {
+        width: 130px;
+    }
+    .contact-small-title {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .form-field {
+        margin-bottom: 5px;
+    }
+    textarea.form-control {
+        border-radius: 10px;
+        height: 115px;
+    }
+    #contact-form .btn {
+        font-size: 13px;
+        padding: 9.5px 30px;
+    }
+
+}
+@media screen and (max-width: 300px) {
+    .navbar {
+        background-color: #0d3373;
+        z-index: 9;
+    }
+    .nav-style1 {
+        border-color: transparent;
+        padding: 4px 0;
+        border-radius: 50px;
+    }
+    .nav-menu {
+        margin: 0;
+    }
+    .style-1 .nav-menu::before {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 130%;
+        width: 20px;
+    }
+    .style-1 .nav-menu::after {
+        display: none;
+    }
+    .style-1 .nav-item:hover .nav-menu::before {
+        height: 1.2px;
+    }
+    .style-1 .nav-item:hover .nav-menu::after {
+        height: 1.2px;
+    }
+    .style-1 .active.nav-menu::before {
+        height: 1.2px;
+    }
+    .style-1 .active.nav-menu::after {
+        height: 1.2px;
+    }
+    .head-contact-us {
+        display: none;
+    }
+    .counter-style2 {
+        margin: 5px 0 10px;
+    }
+    .small-title {
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 1.2;
+    }
+    .main-title {
+        font-size: 24px;
+    }
+    .counter-style1 .countdown-timer #days,
+    .counter-style1 .countdown-timer #hours,
+    .counter-style1 .countdown-timer #minutes,
+    .counter-style1 .countdown-timer #months,
+    .counter-style1 .countdown-timer #seconds,
+    .counter-style1 .countdown-timer #years {
+        width: 23%;
+    }
+    .counter-style1 .countdown-timer .days,
+    .counter-style1 .countdown-timer .hours,
+    .counter-style1 .countdown-timer .minutes,
+    .counter-style1 .countdown-timer .months,
+    .counter-style1 .countdown-timer .seconds,
+    .counter-style1 .countdown-timer .years {
+        font-size: 22px;
+    }
+    .counter-style1 .count-down-list.list-inline > li {
+        border: 1.5px solid #00b3fd;
+        padding: 5px 0;
+        border-radius: 5px;
+    }
+    .counter-style1 .countdown-timer .counter-time-title {
+        font-size: 10px;
+    }
+    .subscribe-form {
+        padding: 0 10px;
+    }
+    .form-inline .form-control {
+        height: 45px;
+        padding-left: 20px;
+        padding-right: 58px;
+    }
+    .form-inline .btn {
+        padding: 7px 15px;
+    }
+    .form-inline .btn .btn-icon {
+        display: block;
+        font-size: 24px;
+    }
+    .form-inline .btn .btn-text {
+        display: none;
+    }
+    .shape-1 {
+        width: 50px;
+    }
+    .shape-2 {
+        width: 50px;
+    }
+    .shape-3 {
+        width: 150px;
+    }
+    .social-icons li a {
+        width: 25px;
+        height: 25px;
+        line-height: 23px;
+    }
+    .social-icon-box {
+        bottom: 6px;
+    }
+    #days .first-bg,
+    #hours .first-bg,
+    #minutes .first-bg,
+    #months .first-bg,
+    #seconds .first-bg,
+    #years .first-bg {
+        height: 50px;
+        width: 50px;
+        border-radius: 8px;
+    }
+    #days .third-bg,
+    #hours .third-bg,
+    #minutes .third-bg,
+    #months .third-bg,
+    #seconds .third-bg,
+    #years .third-bg {
+        height: 50px;
+        width: 50px;
+        border-radius: 8px;
+    }
+    #days .second-bg,
+    #hours .second-bg,
+    #minutes .second-bg,
+    #months .second-bg,
+    #seconds .second-bg,
+    #years .second-bg {
+        height: 50px;
+        width: 50px;
+        border-radius: 8px;
+    }
+    .counter-style2 .countdown-timer #days,
+    .counter-style2 .countdown-timer #hours,
+    .counter-style2 .countdown-timer #minutes,
+    .counter-style2 .countdown-timer #months,
+    .counter-style2 .countdown-timer #seconds,
+    .counter-style2 .countdown-timer #years {
+        text-align: center;
+        position: relative;
+        width: 50px;
+    }
+    .counter-style2 .countdown-timer .days,
+    .counter-style2 .countdown-timer .hours,
+    .counter-style2 .countdown-timer .minutes,
+    .counter-style2 .countdown-timer .months,
+    .counter-style2 .countdown-timer .seconds,
+    .counter-style2 .countdown-timer .years {
+        font-size: 16px;
+        line-height: 1;
+    }
+    .counter-style2 .count-down-list.list-inline > li {
+        padding: 26px 0;
+    }
+    .counter-style2 .countdown-timer .counter-time-title {
+        font-size: 7px;
+    }
+
+
+    .social-icon-box-style2 {
+        bottom: 17px;
+    }
+    .social-icons-style2 {
+        padding: 8px 9px 8px 19px;
+        border-radius: 0 50px 50px 0;
+    }
+    .social-icons-style2 .top-line {
+        top: -8px;
+        left: -27px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+    .social-icons-style2 .bottom-line {
+        bottom: -8px;
+        left: -13px;
+        height: 42px;
+        border: 2px solid #fff;
+    }
+
+    .social-icons li {
+        display: inline-block;
+        margin: 0px 0px;
+    }
+
+
+    .shape-4 {
+        width: 90px;
+    }
+    #main-content-about.fixed-middle {
+        top: 55%;
+    }
+    .about_img {
+        display: none;
+    }
+    .about-small-title {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .about-main-title {
+        font-size: 20px;
+    }
+    #main-content-about .content-text p {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+    .first-pera {
+        margin-top: 10px;
+    }
+    .btn-sm {
+        font-size: 12px;
+        padding: 9px 24px;
+    }
+    .shape-5 {
+        width: 130px;
+    }
+    .contact-small-title {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .contact-main-title {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    .form-field {
+        margin-bottom: 5px;
+    }
+    textarea.form-control {
+        border-radius: 10px;
+        height: 115px;
+    }
+    #contact-form .btn {
+        font-size: 13px;
+        padding: 9.5px 30px;
+    }
+}

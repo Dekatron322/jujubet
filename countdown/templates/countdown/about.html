@@ -1,0 +1,57 @@
+{% extends 'countdown/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="notification is-toast alert alert-{{message.tags}} text-center" role="alert" style="background-color: #1DB954; color: #fff; border-radius: 6px; font-weight: 600;">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+		<!-- BODY PART START -->
+		<div class="tab-content" id="pills-tabContent">
+			<!-- HOME PART -->
+			<div class="tab-pane fade show active" id="pills-contact" role="tabpanel" aria-labelledby="pills-home-tab">
+				
+			
+			<!-- ABOUT PART -->
+
+				<div id="main-content-about" class="xs-no-positioning fixed fixed-middle">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<div class="about_img">
+									<img class="w-100" src="{% static 'countdown/img/download.jpg' %}" style="height: 400px; width:620p" alt="" />
+									<div class="border-shape"></div>
+									<div class="badge"><img class="w-100" src="{% static 'countdown/img/badge.png' %}" alt="" /></div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<div class="title text-left">
+									<span class="about-small-title">About us.</span>
+									<h1 class="about-main-title " style="font-size: 14px">We combine the stats with opinions to give you the best chance of winning your football bets</h1>
+								</div>
+								<div class="content-text">
+									<p class="first-pera" style="font-size:15px">At NoBeJujuBeThis We offer a soccer tips service that is intended for people who are determined to change their future and want to start investing in football betting. We are a professional team of experts who work hard every day to make sure your goals are met.</p>
+									<p class="second-pera" style="font-size:15px">
+										Our predictions will be based sophisticated SQL software  produced by our developers. Currently we are the only tipster service providing AI analysis of this kind. The combination of the software and our long-standing knowledge and experience in the sphere form our confident predictions.
+									</p>
+									
+									<div class="contact-btn">{% url 'contact' as contact %}<a class="nav-link nav-menu {% if contact == request.path %} active {% endif %}" href="{{ contact }}">
+										<button type="button" class="btn btn-primary btn-sm">Contact Us <i class="icofont icofont-swoosh-right"></i></button></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	
+	
+{% endblock %}
+

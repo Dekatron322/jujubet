@@ -1,0 +1,68 @@
+{% extends 'countdown/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="notification is-toast alert alert-{{message.tags}} text-center" role="alert" style="background-color: #1DB954; color: #fff; border-radius: 6px; font-weight: 600;">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+		<!-- BODY PART START -->
+		<div class="tab-content" id="pills-tabContent">
+			<!-- HOME PART -->
+			<div class="tab-pane fade show active" id="pills-contact" role="tabpanel" aria-labelledby="pills-home-tab">
+				
+			
+			<!-- CONTACT PART -->
+			
+				<div id="main-content-contact" class="xs-no-positioning fixed fixed-middle">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="title">
+									<p class="contact-small-title">Contact Us!</p>
+									<span class="contact-main-title">Get In Touch</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-12">
+								<div class="form">
+          <form class="ps-form--contact-us"  action="/contact/" method="post">
+                {% csrf_token %}
+                    <div class="row">
+                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 form-field">
+                         <input type="text"  name="name" class="form-control" placeholder="john doe" /><i class="icofont icofont-user"></i>
+                     </div>
+                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 form-field">
+                         <input type="email" name="email" class="form-control" placeholder="john@gmail.com" /><i class="icofont icofont-envelope"></i>
+                     </div>
+                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 form-field">
+                         <input type="text" name="phone" class="form-control" placeholder="08199921311" /><i class="icofont icofont-phone"></i>
+                     </div>
+                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 form-field">
+                         <input type="text"  name="subject" class="form-control" placeholder="Abuja" /><i class="icofont icofont-location-pin"></i>
+                     </div>
+                     <div class="col-md-12 col-lg-12 col-xl-12 form-field"><textarea id="message" name="message" class="form-control" placeholder="Drop Message Here" rows="7"></textarea></div>
+                                        </div>
+                <div class="text-center"><button type="submit" class="btn btn-primary btn-sm">Contact Us <i class="icofont icofont-swoosh-right"></i></button></div>
+                </form>
+        	</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- BODY PART END -->
+	</div>
+	
+{% endblock %}
+
