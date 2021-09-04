@@ -1,0 +1,390 @@
+{% extends 'main_app/base.html' %}
+
+{% load static %}
+{% block content %}
+		
+		<div class="row bg-gray-middle m-lr0" style="background-image: url(images/background/bg8.jpg); background-position:right top -50px; background-size: 52% auto;">
+			<div class="col-lg-6 bg-primary p-tb30 text-center ">
+				<h2 class="m-a0 m-b15 text-black">Next Match</h2>
+				<div class="countdown dez-style-3 text-center m-b10">
+					<div class="date">
+						<span class="time days"></span>
+						<span class="time-counting">Days</span>
+					</div>
+					<div class="date">
+						<span class="time hours"></span>
+						<span class="time-counting">Hours</span>
+					</div>
+					<div class="date">
+						<span class="time mins"></span>
+						<span class="time-counting">Minutess</span>
+					</div>
+					<div class="date">
+						<span class="time secs"></span>
+						<span class="time-counting">Second</span>
+					</div>
+				</div>
+				<div class="text-black text-center">
+					<span class="font-18">30/03/2020 /16:00AM</span>
+				</div>
+			</div>
+			<div class="col-lg-6 p-tb30" >
+				<div class="row team-compact clearfix">
+					<div class="col-6 text-white text-center dez-vs-team">
+						<span class="team-logo"><img width="150" height="150" src="{% static 'main_app/images/sports-logo/logo2.png' %}" alt=""/></span>
+						<span class="font-18 team-name">Footbal Team</span>
+					</div>
+					<div class="col-6 text-white text-center">
+						<span class="team-logo"><img width="150" height="150" src="{% static 'main_app/images/sports-logo/logo3.png' %}" alt=""/></span>
+						<span class="font-18 team-name">Footbal Team</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Next Match -->
+        <!-- Latest Result -->
+        <div class="section-full bg-gray-dark transparent content-inner bg-img-fix overlay-black-middle" style="background-image:url({% static 'main_app/images/background/bg5.jpg' %}); background-position:center;">
+			<div class="container">
+				<div class="row col-set-block">
+					<!-- Center Section -->
+					<div class="col-sm-12 col-lg-8 col-12">
+						<!-- Latest Match -->
+						<div class="dez-head-bx skew-triangle right-top m-a-out m-b20">
+							<h3 class="text-white m-a0">Latest Match</h3>
+						</div>
+						<div class="row col-set-block">
+							<div class="col-lg-6 col-sm-6 m-b20">
+								<div class="dez-media dez-img-overlay9"><a href=""><img width="600" height="350" src="{% static 'main_app/images/ads/img2.jpg' %}" alt=""/></a></div>
+							</div>	
+							<div class="col-lg-6 col-sm-6 m-b20">
+								<div class="dez-media dez-img-overlay9"><a href=""><img width="600" height="350" src="{% static 'main_app/images/ads/img3.jpg' %}" alt=""/></a></div>
+							</div>	
+						</div>
+						<div class="dez-live-match text-white">
+							<div class="m-b20 blog-grid date-style-2">
+								<div class="dez-post-media dez-img-effect zoom-slow"> 
+									<img width="960" height="342" src="{% static 'main_app/images/gallery/img5.jpg' %}" alt=""/>
+								</div>
+								<div class="dez-post-info border-1 p-a20 border-light bg-gray-middle">
+									<div class="dez-post-title ">
+										<h3 class="m-t0 m-b10"><a href="#" class="text-white">Live Match</a></h3>
+									</div>
+									<div class="dez-post-meta ">
+										<ul>
+											<li class=""> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2020</span> </li>
+											<li class="post-author"><i class="fa fa-user"></i>By <a href="#">demongo</a> </li>
+											<li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0 Comments</a> </li>
+										</ul>
+									</div>
+									<div class="dez-post-text">
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop.</p>
+									</div>
+									<div class="dez-post-readmore"> <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">READ MORE<i class="fa fa-angle-double-right"></i></a> </div>
+									
+								</div>
+							</div>
+							
+						</div>	
+						<!-- Latest Match End -->
+						<!-- Latest Blog -->
+						<div class="dez-head-bx skew-triangle right-top m-a-out m-b20">
+							<h3 class="text-white m-a0">Latest Blog</h3>
+						</div>
+						<div class="blog">
+							<div class="blog-md clearfix bg-gray-middle  border-1 border-light p-a15 m-b20">
+								<div class="dez-post-media dez-img-effect zoom-slow "> <a href="#"><img width="700" height="438" src="{% static 'main_app/images/our-work/pic4.jpg' %}" alt=""></a> </div>
+								<div class="dez-post-info text-white">
+									<div class="dez-post-title ">
+										<h3 class="m-t5"><a href="#" class="text-white">Title of first blog post</a></h3>
+									</div>
+									<div class="dez-post-meta ">
+										<ul>
+											<li class="post-date"> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2020</span> </li>
+											<li class="post-author"><i class="fa fa-user"></i>By <a href="#">demongo</a> </li>
+											<li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0</a> </li>
+										</ul>
+									</div>
+									<div class="dez-post-text">
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley .</p>
+									</div>
+									<div class="dez-post-readmore"> <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">READ MORE<i class="fa fa-angle-double-right"></i></a> </div>
+									
+								</div>
+							</div>
+							<div class="blog-post blog-md clearfix bg-gray-middle  border-1 border-light p-a15">
+								<div class="dez-post-media dez-img-effect zoom-slow "> <a href="#">
+									<img width="700" height="438" src="{% static 'main_app/images/our-work/pic3.jpg' %}" alt=""></a> 
+								</div>
+								<div class="dez-post-info text-white">
+									<div class="dez-post-title ">
+										<h3 class="m-t5"><a href="#" class="text-white">Title of first blog post</a></h3>
+									</div>
+									<div class="dez-post-meta ">
+										<ul>
+											<li class="post-date"> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2020</span> </li>
+											<li class="post-author"><i class="fa fa-user"></i>By <a href="#">demongo</a> </li>
+											<li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0</a> </li>
+										</ul>
+									</div>
+									<div class="dez-post-text">
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+									</div>
+									<div class="dez-post-readmore"> <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">READ MORE<i class="fa fa-angle-double-right"></i></a> </div>
+									
+								</div>
+							</div>
+						</div>
+						<!-- Latest Blog END -->
+						<!-- Club Media -->
+						<div class="dez-head-bx skew-triangle right-top m-a-out m-b20">
+							<h3 class="text-white m-a0">Club Media</h3>
+						</div>
+						<div class="row dez-club-media">
+							<div class="col-lg-4 col-sm-6 m-b20">
+								<div class="dez-box">
+                                    <div class="dez-media dez-img-overlay2 dez-img-effect zoom"> <img width="350" height="314" src="{% static 'main_app/images/gallery/middle/pic1.jpg' %}" alt="">
+                                        <div class="dez-info-has p-a20  no-hover">
+                                            <a href="">We have the expertise to create just the right..</a>
+											<a class="site-button button-sm radius-sm m-t5" href="">5+ Images </a>
+                                        </div>
+                                    </div>                                   
+                                </div>
+							</div>
+							<div class="col-lg-4 col-sm-6 m-b20">
+								<div class="dez-box">
+                                    <div class="dez-media dez-img-overlay2 dez-img-effect zoom"> <img width="350" height="314" src="{% static 'main_app/images/gallery/middle/pic2.jpg' %}" alt="">
+                                        <div class="dez-info-has p-a20  no-hover">
+                                            <a href="">We have the expertise to create just the right..</a>
+											<a class="site-button button-sm radius-sm m-t5" href="">5+ Images </a>
+                                        </div>
+                                    </div>                                   
+                                </div>
+							</div>
+							<div class="col-lg-4 col-sm-6 m-b20">
+								<div class="dez-box">
+                                    <div class="dez-media dez-img-overlay2 dez-img-effect zoom"> <img width="350" height="314" src="{% static 'main_app/images/gallery/middle/pic3.jpg' %}" alt="">
+                                        <div class="dez-info-has p-a20  no-hover">
+                                            <a href="">We have the expertise to create just the right..</a>
+											<a class="site-button button-sm radius-sm m-t5" href="">5+ Images </a>
+                                        </div>
+                                    </div>                                   
+                                </div>
+							</div>
+							<div class="col-lg-4 col-sm-6 m-b20">
+								<div class="dez-box">
+                                    <div class="dez-media dez-img-overlay2 dez-img-effect zoom"> <img width="350" height="314" src="{% static 'main_app/images/gallery/middle/pic4.jpg' %}" alt="">
+                                        <div class="dez-info-has p-a20  no-hover">
+                                            <a href="">We have the expertise to create just the right..</a>
+											<a class="site-button button-sm radius-sm m-t5" href="">5+ Images </a>
+                                        </div>
+                                    </div>                                   
+                                </div>
+							</div>
+							<div class="col-lg-4 col-sm-6 m-b20">
+								<div class="dez-box">
+                                    <div class="dez-media dez-img-overlay2 dez-img-effect zoom"> <img width="350" height="314" src="{% static 'main_app/images/gallery/middle/pic5.jpg' %}" alt="">
+                                        <div class="dez-info-has p-a20  no-hover">
+                                            <a href="">We have the expertise to create just the right..</a>
+											<a class="site-button button-sm radius-sm m-t5" href="">5+ Images </a>
+                                        </div>
+                                    </div>                                   
+                                </div>
+							</div>
+							<div class="col-lg-4 col-sm-6 m-b20">
+								<div class="dez-box">
+                                    <div class="dez-media dez-img-overlay2 dez-img-effect zoom"> <img width="350" height="314" src="{% static 'main_app/images/gallery/middle/pic6.jpg' %}" alt="">
+                                        <div class="dez-info-has p-a20  no-hover">
+                                            <a href="">We have the expertise to create just the right..</a>
+											<a class="site-button button-sm radius-sm m-t5" href="">5+ Images </a>
+                                        </div>
+                                    </div>                                   
+                                </div>
+							</div>
+						</div>
+						<!-- Club Media END -->
+					</div>
+					<!-- Right Section -->
+					<div class="col-sm-12 col-lg-4 col-12">
+						<!-- Match Overview -->
+						<div class="dez-card">
+							<div class="dez-head-bx skew-triangle right-top m-a-out">
+								<h3 class="text-white m-a0">Match Overview</h3>
+							</div>
+							<table class="table table-bordered bg-gray-middle border-light text-white dez-score-table"> 
+								<thead> 
+									<tr class="table-headding"> 
+										<th>#</th> 
+										<th>Team</th> 
+										<th>P</th> 
+										<th>W</th> 
+										<th>L</th> 
+									</tr> 
+								</thead> 
+								<tbody> 
+									<tr> 
+										<th scope="row">1</th> 
+										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo1.png' %}" alt=""/></span>Liverpool</td> 
+										<td>10</td> 
+										<td>12</td> 
+										<td>08</td> 
+									</tr>
+									<tr> 
+										<th scope="row">2</th> 
+										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo2.png' %}" alt=""/></span>Chelsea</td> 
+										<td>10</td> 
+										<td>12</td> 
+										<td>08</td> 
+									</tr>
+									<tr> 
+										<th scope="row">3</th> 
+										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo3.png' %}" alt=""/></span> Norwich City</td> 
+										<td>10</td> 
+										<td>12</td> 
+										<td>08</td> 
+									</tr>
+									<tr> 
+										<th scope="row">4</th> 
+										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo1.png' %}" alt=""/></span>West Brom</td> 
+										<td>10</td> 
+										<td>12</td> 
+										<td>08</td> 
+									</tr>
+									<tr> 
+										<th scope="row">5</th> 
+										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo2.png' %}" alt=""/></span>sunderland</td> 
+										<td>10</td> 
+										<td>12</td> 
+										<td>08</td> 
+									</tr>
+									<tr> 
+										<th scope="row">6</th> 
+										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo3.png' %}" alt=""/></span>Chelsea</td> 
+										<td>10</td> 
+										<td>12</td> 
+										<td>08</td> 
+									</tr>
+								</tbody> 
+							</table>
+						</div>
+						<!-- Match Overview END -->
+						<!-- Our Gallery -->
+						<div class="dez-card">
+							<div class="dez-head-bx skew-triangle right-top m-a-out">
+								<h3 class="text-white m-a0">Our Gallery</h3>
+							</div>
+							<div class="widget bg-gray-middle widget_gallery  p-a20 border-1 border-light">
+								<ul class="m-b0">
+									<li class="img-effect2"> <a href="javascript:void(0);"><img width="165" height="148" src="{% static 'main_app/images/gallery/small/pic1.jpg' %}" alt=""></a> </li>
+									<li class="img-effect2"> <a href="javascript:void(0);"><img width="165" height="148" src="{% static 'main_app/images/gallery/small/pic2.jpg' %}" alt=""></a> </li>
+									<li class="img-effect2"> <a href="javascript:void(0);"><img width="165" height="148" src="{% static 'main_app/images/gallery/small/pic3.jpg' %}" alt=""></a> </li>
+									<li class="img-effect2"> <a href="javascript:void(0);"><img width="165" height="148" src="{% static 'main_app/images/gallery/small/pic4.jpg' %}" alt=""></a> </li>
+									<li class="img-effect2"> <a href="javascript:void(0);"><img width="165" height="148" src="{% static 'main_app/images/gallery/small/pic5.jpg' %}" alt=""></a> </li>
+									<li class="img-effect2"> <a href="javascript:void(0);"><img width="165" height="148" src="{% static 'main_app/images/gallery/small/pic6.jpg' %}" alt=""></a> </li>
+									<li class="img-effect2"> <a href="javascript:void(0);"><img width="165" height="148" src="{% static 'main_app/images/gallery/small/pic7.jpg' %}" alt=""></a> </li>
+									<li class="img-effect2"> <a href="javascript:void(0);"><img width="165" height="148" src="{% static 'main_app/images/gallery/small/pic8.jpg' %}" alt=""></a> </li>
+									<li class="img-effect2"> <a href="javascript:void(0);"><img width="165" height="148" src="{% static 'main_app/images/gallery/small/pic9.jpg' %}" alt=""></a> </li>
+								</ul>
+							</div>
+						</div>
+						<!-- Our Gallery END -->
+						<div class="row">
+						<!-- Recent Posts -->
+						<div class="dez-card col-lg-12 col-sm-6">
+							<div class="dez-head-bx skew-triangle right-top m-a-out">
+								<h3 class="text-white m-a0">Recent Posts</h3>
+							</div>
+							<div class="home-dez widget recent-posts-entry bg-gray-middle p-a20 border-1 border-light">
+								<div class="widget-post-bx text-white">
+									<div class="widget-post clearfix">
+										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic1.jpg' %}" alt="" width="200" height="143"> </div>
+										<div class="dez-post-info">
+											<div class="dez-post-header">
+												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
+											</div>
+											<div class="dez-post-meta">
+												<ul>
+													<li class="post-author">By <a href="#">Admin</a></li>
+													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="widget-post clearfix">
+										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic2.jpg' %}" alt="" width="200" height="160"> </div>
+										<div class="dez-post-info">
+											<div class="dez-post-header">
+												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
+											</div>
+											<div class="dez-post-meta">
+												<ul>
+													<li class="post-author">By <a href="#">Admin</a></li>
+													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="widget-post clearfix">
+										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic3.jpg' %}" alt="" width="200" height="160"> </div>
+										<div class="dez-post-info">
+											<div class="dez-post-header">
+												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
+											</div>
+											<div class="dez-post-meta">
+												<ul>
+													<li class="post-author">By <a href="#">Admin</a></li>
+													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="widget-post clearfix">
+										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic1.jpg' %}" alt="" width="200" height="160"> </div>
+										<div class="dez-post-info">
+											<div class="dez-post-header">
+												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
+											</div>
+											<div class="dez-post-meta">
+												<ul>
+													<li class="post-author">By <a href="#">Admin</a></li>
+													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="widget-post clearfix">
+										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic2.jpg' %}" alt="" width="200" height="160"> </div>
+										<div class="dez-post-info">
+											<div class="dez-post-header">
+												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
+											</div>
+											<div class="dez-post-meta">
+												<ul>
+													<li class="post-author">By <a href="#">Admin</a></li>
+													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Recent Posts END -->
+						<!-- Ads -->
+						<div class="add col-lg-12 col-sm-6 m-b30">
+							<div class="m-b20">
+								<div class="dez-media dez-img-overlay9"><a href=""><img src="{% static 'main_app/images/ads/img2.jpg' %}" alt=""/></a></div>
+							</div>
+							<img width="492" height="487" src="{% static 'main_app/images/ads/img4.jpg' %}" alt=""/>
+						</div>
+						<!-- Ads END -->
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <!-- Latest Result END -->
+		
+    </div>
+			
+   <!-- Content END-->
+   {% endblock %}

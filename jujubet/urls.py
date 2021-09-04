@@ -20,5 +20,6 @@ from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include('countdown.urls')),
+    #path("", include('countdown.urls')),
+    path("", include('main_app.urls')),
 ]
