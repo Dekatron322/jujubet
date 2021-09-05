@@ -5,6 +5,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from . import views
 from django.urls import reverse
 import requests
+import json
 # Create your views here.
 
 
@@ -46,12 +47,12 @@ def subscribe(request):
    
     return render(request, 'main_app/subscribe.html')
 
-
-def livescores(request):
-    pass
+def livescores(request):    
+    return render(request, 'main_app/livescores.html')
 
 def vip(request):
     return render(request, 'main_app/vip.html')
 
 def policy(request):
     return render(request, 'main_app/policy.html')
+

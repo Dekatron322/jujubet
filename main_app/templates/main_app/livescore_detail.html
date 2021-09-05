@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<div class = "container">
+  <div class = "container">
       <br>
       <h2 class = "text-center">Search for your favorite Meals</h2> 
       <br>
@@ -19,34 +19,26 @@
         <button type = "submit" class = "btn-danger btn-sm">SEARCH MEAL</button>
       </form> 
     </div> 
-
+<div class = "container"> 
     <br><br>
-    <div class="row">
-      {% for meal in all_meals %}
-        <div class="col-md-4 col-sm-6 col-lg-3">
-          <div class="card">
-            <img class="card-img-top" src="{{ meal.image_url }}" alt="Card image cap">
-            <div class="card-body text-center">
-              <p class="card-title">{{ meal.name }}</p>
-              <hr>
-              <p class="card-text">{{ meal.region }}</p>
-              <a href="/meals/{{meal.id}}"
-              ><input
-                type="submit"
-                value="Learn More"
-                class="btn btn-danger btn-sm"
-                type="button"
-            /></a>
-            </div>
-          </div>
-          <br><br><br>
+    <div class="row"> 
+        <div class="col-md-5">
+          <br>
+          <img class="img-fluid" src="{{ meal.image_url }}" alt="" style = "width: 90%;">
+          <br><br>
+          <h3 class="card-title text-center ">{{ meal.name }}</h3>
+        </div> 
+        <div class="col-md-7 shadow-lg p-3 mb-5 bg-white rounded">
+          <h1 class="my-3">Food Description</h1>
+          <p class = "lead">{{ meal.instructions }}</p>
+          <h1 class="my-3">Food Details</h1>
+          <ul>
+            <li>{{ meal.category }}</li>
+            <li>{{ meal.region }}</li>
+          </ul>
         </div>
-      {% endfor %}
     </div>
-  </div>
-
-
-
+</div>
 
 <script src = "{% static 'js/script.js' %}"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

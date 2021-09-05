@@ -18,7 +18,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="{% static 'main_app/images/favicon.png' %}" />
 	
 	<!-- Page Title Here -->
-	<title>SportsZone - Sports Template</title>
+	<title>NoBeJujuBeThis - Sports Bet Tips</title>
 
 	<!-- Mobile Specific -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,17 +52,16 @@
 					<div class="row justify-content-between">
 						<div class="dez-topbar-left">
 							<ul class="social-line text-center pull-right">
-								<li><a href="javascript:void(0);"><i class="fa fa-phone"></i> <span>+149 75 23 222 35</span> </a></li>
-								<li><a href="javascript:void(0);"><i class="fa fa-clock-o"></i> <span>renovate@mail.com</span></a></li>
-								<li><a href="javascript:void(0);"><i class="fa fa-envelope-o"></i> <span>Mon - Fri: 08.00 - 17.00</span></a></li>
+								<li><a href="tel:08129859405"><i class="fa fa-phone"></i> <span>+234 8129 8594 05</span> </a></li>
+								<li><a href="mailto:contact@nobejujubethis.com"><i class="fa fa-clock-o"></i> <span>contact@nobejujubethis.com</span></a></li>
+								
 							</ul>
 						</div>                        
 						<div class="dez-topbar-right">
 							<ul class="social-line text-center pull-right">
-								<li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
-								<li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
-								<li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-								<li><a href="javascript:void(0);" class="fa fa-google-plus"></a></li>
+								<li><a href="tel:08129859405" class="fa fa-phone"></a></li>
+								<li><a href="https://twitter.com/nobejujubethis.com/" class="fa fa-twitter"></a></li>
+								<li><a href="mailto:contact@nobejujubethis.com" class="fa fa-google-plus"></a></li>
 							</ul>
 						</div>
 					</div>
@@ -112,6 +111,9 @@
 								<li class="{% if subscribe == request.path %} active {% endif %}"> <a href="{{ subscribe }}">Subscribe</a></li>
 								{% url 'vip' as vip %}
 								<li class="{% if vip == request.path %} active {% endif %}"> <a href="{{ vip }}">Vip Games</a></li>
+
+								{% url 'policy' as policy %}
+								<li class="{% if policy == request.path %} active {% endif %}"> <a href="{{ policy }}">Privacy Policy</a></li>
 								
 								
 							</ul>
@@ -129,14 +131,14 @@
 
 		 <!-- Footer -->
 	    <!-- Footer -->
-	<footer class="site-footer footer-overlay bg-img-fix" style="background-image: url({% static 'main_app/images/background/bg5.jpg' %}); background-position: center bottom; background-size: cover; display: block;">
+	<footer class="site-footer footer-overlay bg-img-fix" style="background-image: url({% static 'main_app/images/background/AWTmJtE.jpg' %}); background-position: center bottom; background-size: cover; display: block;">
         <div class="footer-top">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-sm-6 footer-col-4">
                         <form role="search" method="post" action="script/mailchamp.php" class="dzSubscribe bg-primary p-a20 text-white m-t15">
 							<h2 class="m-tb0 font-40">Subscribe</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							<p>subscribe for our newsletter.</p>
 							<div class="m-tb15">
 								<ul class="dez-social-icon border dez-social-icon-lg">
 									<li><a href="javascript:void(0);" class="fa fa-facebook fb-btn"></a></li>
@@ -145,6 +147,7 @@
 									<li><a href="javascript:void(0);" class="fa fa-pinterest-p pin-btn"></a></li>
 								</ul>
 							</div>
+							<br>
 							<div class="m-b15">
 								<div class="dzSubscribeMsg"></div>
 								<input name="dzEmail" required="required" class="form-control" placeholder="Email Adddres" type="email">
@@ -153,6 +156,7 @@
 								<input  name="submit" value="Submit" type="submit" class="site-button button-3d gray btn-block">
 							</div>
 						</form>
+
                     </div>
                     <div class="col-lg-3 col-sm-6 footer-col-4">
                         <div class="widget recent-posts-entry">
@@ -209,12 +213,12 @@
                             <h4 class="m-b15 text-uppercase">Our services</h4>
                             <div class="dez-separator bg-primary"></div>
                             <ul>
-                                <li><a href="services-2.html">Membership Offers</a></li>
-                                <li><a href="services-2.html">Training Schedule</a></li>
-                                <li><a href="services-2.html">Inter Competitions</a></li>
-                                <li><a href="services-2.html">Awards & Trophies</a></li>
-                                <li><a href="services-2.html">Additional Help</a></li>
-                                <li><a href="services-2.html">Training Schedule</a></li>
+                                <li><a href="/vip/">Vip</a></li>
+                                <li><a href="/policy/">Privacy Policy</a></li>
+                                <li><a href="/faq/">Frequency Asked Questions</a></li>
+                                <li><a href="/about/">About Us</a></li>
+                                <li><a href="/contact/">Contact Us</a></li>
+                                <li><a href="/subscribe/">Subscribe</a></li>
                             </ul>
                         </div>
                     </div>
@@ -242,8 +246,8 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 text-left"> <span>© Copyright 2020</span> </div>
-					<div class="col-lg-4 text-center"> <span> Design With <i class="fa fa-heart text-red heart"></i> By DexignZone </span> </div>
+                    <div class="col-lg-4 text-left"> <span>© Copyright 2021</span> </div>
+					<div class="col-lg-4 text-center"> <span> Design With <i class="fa fa-heart text-red heart"></i> By Oppenhiem </span> </div>
 					<div class="col-lg-4 text-right "> <a href="about-2.html"> About</a> <a href="help.html"> Help Desk</a> <a href="privacy-policy.html"> Privacy Policy</a> </div>
                 </div>
             </div>
