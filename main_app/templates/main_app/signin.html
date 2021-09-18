@@ -33,23 +33,65 @@
 
 </head>
 <body id="bg">
+<style type="text/css">
+    
+    .alert{
+        box-shadow: 5px 5px 10px #111;
+        border: none;
+    }
+    @keyframes show-toast {
+    0%   {bottom: -100%;}
+    20%  {bottom: 50px;}
+    80%  {bottom: 50px;}
+    100% {bottom: -10%;}
+}
+
+.notification.is-toast {
+    position: fixed;
+    bottom: 100%;
+    right: 20px;
+    animation-name: show-toast;
+    animation-duration: 6s;
+}
+@media(max-width: 450px) {
+    h3{
+      font-size: 15px !important;
+    }
+  }
+</style>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="notification is-toast alert alert-{{message.tags}} text-center" role="alert" style="background-color: #1DB954; color: #fff; border-radius: 6px; font-weight: 600; z-index: 1;">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
 <div class="page-wrapers">
     <!-- Content -->
     <div class="page-content dez-login p-t50 p-lr15 nav">
         <div class="login-form">
             <div class="tab-content">
                 <div id="login" class="tab-pane active text-center">
-                    <form class="p-a25 dez-form p-b0 m-t100">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="notification is-toast alert alert-{{message.tags}} text-center" role="alert" style="background-color: #9f0101; color: #fff; border-radius: 6px; font-weight: 600;">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    <form class="p-a25 dez-form p-b0 m-t100" action="" method="post">
+                        {% csrf_token %}
                         <h3 class="form-title m-t0">Sign In</h3>
                         <div class="dez-separator-outer m-b5">
                             <div class="dez-separator bg-primary style-liner"></div>
                         </div>
                         <p>Enter your e-mail address and your password. </p>
                         <div class="form-group">
-                            <input name="dzName" required="" class="form-control" placeholder="User Name" type="text"/>
+                            <input name="username" required="" class="form-control" placeholder="User Name" type="text"/>
                         </div>
                         <div class="form-group">
-                            <input name="dzName" required="" class="form-control " placeholder="Type Password" type="password"/>
+                            <input name="password" required="" class="form-control " placeholder="Type Password" type="password"/>
                         </div>
                         <div class="form-group text-left">
                             <button class="site-button m-r5 login-switch">login</button>

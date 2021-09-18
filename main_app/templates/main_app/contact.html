@@ -2,6 +2,42 @@
 
 {% load static %}
 {% block content %}
+
+<style type="text/css">
+    
+    .alert{
+        box-shadow: 5px 5px 10px #111;
+        border: none;
+    }
+    @keyframes show-toast {
+    0%   {bottom: -100%;}
+    20%  {bottom: 50px;}
+    80%  {bottom: 50px;}
+    100% {bottom: -10%;}
+}
+
+.notification.is-toast {
+    position: fixed;
+    bottom: 100%;
+    right: 20px;
+    animation-name: show-toast;
+    animation-duration: 6s;
+}
+@media(max-width: 450px) {
+    h3{
+      font-size: 15px !important;
+    }
+  }
+</style>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="notification is-toast alert alert-{{message.tags}} text-center" role="alert" style="background-color: #1DB954; color: #fff; border-radius: 6px; font-weight: 600; z-index: 1;">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
 	<!-- Content -->
     <div class="page-content">
         <!-- inner page banner -->
@@ -72,57 +108,40 @@
                         <div class="p-a30 bg-gray clearfix">
 							<h2>Send Message Us</h2>
 							<div class="dzFormMsg"></div>
-							<form method="post" class="dzForm" action="script/contact.php">
-							<input type="hidden" value="Contact" name="dzToDo" >
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <input name="dzName" type="text" required class="form-control" placeholder="Your Name">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <div class="input-group"> 
-											    <input name="dzEmail" type="email" class="form-control" required  placeholder="Your Email Id" >
-                                            </div>
-                                        </div>
-                                    </div>
-									<div class="col-lg-6">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <input name="dzOther[Phone]" type="text" required class="form-control" placeholder="Phone">
-                                            </div>
-                                        </div>
-                                    </div>
-									<div class="col-lg-6">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <input name="dzOther[Subject]" type="text" required class="form-control" placeholder="Subject">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <textarea name="dzMessage" rows="4" class="form-control" required placeholder="Your Message..."></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-									<div class="col-lg-12">
-										<div class="form-group">
-											<div class="input-group">
-												<div class="g-recaptcha" data-sitekey="<!-- Put Your reCaptcha Secret Key -->" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-												<input class="form-control d-none" style="display:none;" data-recaptcha="true" required data-error="Please complete the Captcha">
-											</div>
-										</div>
-									</div>
-                                    <div class="col-lg-12">
+							<form class="ps-form--contact-us"  action="/contact/" method="post">
+                    {% csrf_token %}
+                    <h3 >Get In Touch</h3>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                            <div class="form-group" style="box-shadow: 5px 5px 10px #cccccc; border-radius: 6px;">
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Name*">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="form-group" style="box-shadow: 5px 5px 10px #cccccc; border-radius: 6px;">
+                                <input class="form-control" type="text" name="email" placeholder="Email *">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="form-group" style="box-shadow: 5px 5px 10px #cccccc; border-radius: 15px;">
+                                <input class="form-control" name="phone" type="text" placeholder="Phone *">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="form-group" style="box-shadow: 5px 5px 10px #cccccc; border-radius: 15px;">
+                                <input class="form-control" name="subject" type="text" placeholder="Subject *">
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                            <div class="form-group" style="box-shadow: 5px 5px 10px #cccccc; border-radius: 15px;">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
                                         <button name="submit" type="submit" value="Submit" class="site-button "> <span>Submit</span> </button>
                                     </div>
-                                </div>
-                            </form>
+                </form>
                         </div>
                     </div>
                     <!-- Left part END -->

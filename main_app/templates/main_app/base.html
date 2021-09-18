@@ -14,8 +14,8 @@
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- Favicons Icon -->
-	<link rel="icon" href="{% static 'main_app/images/favicon.ico' %}" type="image/x-icon" />
-	<link rel="shortcut icon" type="image/x-icon" href="{% static 'main_app/images/favicon.png' %}" />
+	<link rel="icon" href="" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="" />
 	
 	<!-- Page Title Here -->
 	<title>NoBeJujuBeThis - Sports Bet Tips</title>
@@ -54,7 +54,6 @@
 							<ul class="social-line text-center pull-right">
 								<li><a href="tel:08129859405"><i class="fa fa-phone"></i> <span>+234 8129 8594 05</span> </a></li>
 								<li><a href="mailto:contact@nobejujubethis.com"><i class="fa fa-clock-o"></i> <span>contact@nobejujubethis.com</span></a></li>
-								
 							</ul>
 						</div>                        
 						<div class="dez-topbar-right">
@@ -62,6 +61,9 @@
 								<li><a href="tel:08129859405" class="fa fa-phone"></a></li>
 								<li><a href="https://twitter.com/nobejujubethis.com/" class="fa fa-twitter"></a></li>
 								<li><a href="mailto:contact@nobejujubethis.com" class="fa fa-google-plus"></a></li>
+								{% if user.is_authenticated %}
+								<li><a href="/logout/" class="fa fa-lock" onclick="return confirm('Your session would be terminated.\n\nProceed?')"></a></li>
+								{% endif %}
 							</ul>
 						</div>
 					</div>
@@ -70,11 +72,11 @@
 			<!-- top bar END-->
 			
 			<!-- main header -->
-			<div class=" sticky-header main-bar-wraper navbar-expand-lg  navbar-expand-lg">
-				<div class="main-bar clearfix ">
-					<div class="container clearfix">
+			<div class=" sticky-header main-bar-wraper navbar-expand-lg  navbar-expand-lg" style="background-color:black;">
+				<div class="main-bar clearfix " style="background-color:black;">
+					<div class="container clearfix" style="background-color:black;">
 						<!-- website logo -->
-						<div class="logo-header mostion"><a href="index.html"><img src="{% static 'main_app/images/logo.png' %}" width="193" height="89" alt=""></a></div>
+						<div class="logo-header mostion"><a href="/"><img src="{% static 'main_app/images/20210906_234248.jpg' %}" alt=""></a></div>
 						<!-- nav toggle button -->
 						<button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 							<span></span>
@@ -109,11 +111,20 @@
 								</a></li>
 								{% url 'subscribe' as subscribe %}
 								<li class="{% if subscribe == request.path %} active {% endif %}"> <a href="{{ subscribe }}">Subscribe</a></li>
-								{% url 'vip' as vip %}
-								<li class="{% if vip == request.path %} active {% endif %}"> <a href="{{ vip }}">Vip Games</a></li>
+								
+								{% url 'vip_game' as vip_game %}
+								<li class="{% if vip_game == request.path %} active {% endif %}"> <a href="{{ vip_game }}">Vip Games</a></li>
 
 								{% url 'policy' as policy %}
 								<li class="{% if policy == request.path %} active {% endif %}"> <a href="{{ policy }}">Privacy Policy</a></li>
+
+
+								{% if request.user.is_superuser %}
+								{% url 'boss' as boss %}
+									<li class="{% if boss == request.path %} active {% endif %}"> <a href="{{ boss }}">Admin Page</a></li>
+								{% else %}
+
+								{% endif %}
 								
 								
 							</ul>
@@ -226,16 +237,10 @@
 						<div class="widget widget_gallery">
 							<h4 class="m-b15 text-uppercase">PHOTOS FROM FLICKR</h4>
 							<div class="dez-separator bg-primary"></div>
-							<ul>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="{% static 'main_app/images/gallery/small/pic1.jpg' %}" alt=""></a> </li>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="{% static 'main_app/images/gallery/small/pic2.jpg' %}" alt=""></a> </li>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="{% static 'main_app/images/gallery/small/pic3.jpg' %}" alt=""></a> </li>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="{% static 'main_app/images/gallery/small/pic4.jpg' %}" alt=""></a> </li>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="{% static 'main_app/images/gallery/small/pic5.jpg' %}" alt=""></a> </li>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="{% static 'main_app/images/gallery/small/pic6.jpg' %}" alt=""></a> </li>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="{% static 'main_app/images/gallery/small/pic7.jpg' %}" alt=""></a> </li>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="{% static 'main_app/images/gallery/small/pic8.jpg' %}" alt=""></a> </li>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="{% static 'main_app/images/gallery/small/pic9.jpg' %}" alt=""></a> </li>
+							<ul>{% for rs in footer %}
+								<li class="img-effect2"> <a href="{{ rs.link }}"><img src="{{ rs.image.url }}" alt=""></a> </li>
+								
+								{% endfor %}
 							</ul>
 						</div>
 					</div>

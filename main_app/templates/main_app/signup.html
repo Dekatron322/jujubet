@@ -38,36 +38,68 @@
     <div class="page-content dez-login p-t50 p-lr15 nav">
         <div class="login-form">
             <div class="tab-content">
-                
-                
-                
-                    <form class="p-a25 dez-form text-center text-center">
+                <style type="text/css">
+    
+    .alert{
+        box-shadow: 5px 5px 10px #111;
+        border: none;
+    }
+    @keyframes show-toast {
+    0%   {bottom: -100%;}
+    20%  {bottom: 50px;}
+    80%  {bottom: 50px;}
+    100% {bottom: -10%;}
+}
+
+.notification.is-toast {
+    position: fixed;
+    bottom: 100%;
+    right: 20px;
+    animation-name: show-toast;
+    animation-duration: 6s;
+}
+@media(max-width: 450px) {
+    h3{
+      font-size: 15px !important;
+    }
+  }
+</style>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="notification is-toast alert alert-{{message.tags}} text-center" role="alert" style="background-color: #1DB954; color: #fff; border-radius: 6px; font-weight: 600; z-index: 1;">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+                    <form class="p-a25 dez-form text-center text-center" action="" method="post">
+                        {% csrf_token %}
                         <h3 class="form-title m-t0">Sign Up</h3>
                         <div class="dez-separator-outer m-b5">
                             <div class="dez-separator bg-primary style-liner"></div>
                         </div>
                         <p>Enter your personal details below: </p>
                         <div class="form-group">
-                            <input name="dzName" required="" class="form-control" placeholder="Full Name" type="text"/>
+                            <input name="first_name" required="" class="form-control" placeholder="First Name" type="text"/>
                         </div>
+
                         <div class="form-group">
-                            <input name="dzName" required="" class="form-control" placeholder="Email Id" type="text"/>
+                            <input name="last_name" required="" class="form-control" placeholder="First Name" type="text"/>
                         </div>
+
                         <div class="form-group">
-                            <input name="dzName" required="" class="form-control" placeholder="Address" type="text"/>
+                            <input name="email" required="" class="form-control" placeholder="Email Id" type="text"/>
                         </div>
-                        <div class="form-group">
-                            <input name="dzName" required="" class="form-control" placeholder="City/Town" type="text"/>
-                        </div>
+                       
                         <label class="text-left m-b20">Enter your account details below: </label>
                         <div class="form-group">
-                            <input name="dzName" required="" class="form-control" placeholder="User Name" type="text"/>
+                            <input name="username" required="" class="form-control" placeholder="User Name" type="text"/>
                         </div>
                         <div class="form-group">
-                            <input name="dzName" required="" class="form-control" placeholder="Password" type="text"/>
+                            <input name="password1" required="" class="form-control" placeholder="Password" type="text"/>
                         </div>
                         <div class="">
-                            <input name="dzName" required="" class="form-control" placeholder="Re-type Your Password" type="text"/>
+                            <input name="password2" required="" class="form-control" placeholder="Re-type Your Password" type="text"/>
                         </div>
                         <label class="m-b30">
                         <input type="checkbox"/>

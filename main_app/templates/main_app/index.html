@@ -2,6 +2,41 @@
 
 {% load static %}
 {% block content %}
+
+<body class="hold-transition login-page" style="background-color: #0e1326">
+<style type="text/css">
+    
+    .alert{
+        box-shadow: 5px 5px 10px #111;
+        border: none;
+    }
+    @keyframes show-toast {
+    0%   {bottom: -100%;}
+    20%  {bottom: 50px;}
+    80%  {bottom: 50px;}
+    100% {bottom: -50%;}
+}
+
+.notification.is-toast {
+    position: fixed;
+    bottom: 100%;
+    right: 20px;
+    animation-name: show-toast;
+    animation-duration: 10s;
+}
+@media(max-width: 450px) {
+    h3{
+      font-size: 15px !important;
+    }
+  }
+</style>
+{% if messages %}
+    {% for message in messages %}
+        <div class="notification is-toast alert alert-{{message.tags}} text-center" role="alert" style="background-color: #1DB954; color: #fff; border-radius: 6px; font-weight: 600; z-index: 1;">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
 		<!-- Content -->
 		<div class="page-content">
 		<!-- Slider -->
@@ -13,9 +48,9 @@
 						<div id="slider_02" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
 							<ul>	
 								<!-- SLIDE -->
-								<li data-index="rs-100" data-transition="parallaxvertical" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="{% static 'main_app/images/main-slider/stadium-2606345_1920.jpg' %}"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="A STUDY ON HAPPINESS" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="">
+								<li data-index="rs-100" data-transition="parallaxvertical" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="{% static 'main_app/images/background/futbol.jpg' %}"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="A STUDY ON HAPPINESS" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="">
 									<!-- MAIN IMAGE -->
-									<img src="{% static 'main_app/images/main-slider/stadium-2606345_1920.jpg' %}"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+									<img src="{% static 'main_app/images/background/futbol.jpg' %}"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 									<!-- LAYERS -->
 
 									<!-- LAYER NR. 1 -->
@@ -265,6 +300,7 @@
 					<span class="font-18">30/03/2020 /16:00AM</span>
 				</div>
 			</div>
+			
 			<div class="col-lg-6 p-tb30" >
 				<div class="row team-compact clearfix">
 					<div class="col-6 text-white text-center dez-vs-team">
@@ -371,18 +407,20 @@
 						</div>
 						
 						<div class="row col-set-block">
-							<div class="col-lg-6 col-sm-6 m-b20">
-								<div class="dez-media dez-img-overlay9"><a href=""><img width="600" height="350" src="{% static 'main_app/images/background/1150702.jpg' %}" alt=""/></a></div>
+							{% for rs in ads %}
+							<div class="col-lg-6 col-sm-6 m-b20"><a href="{{ rs.link }}">
+								<div class="dez-media dez-img-overlay9"><img width="600" height="350" src="{{ rs.image.url }}" alt=""/></div>
 							</div>	
-							<div class="col-lg-6 col-sm-6 m-b20">
-								<div class="dez-media dez-img-overlay9"><a href=""><img width="600" height="350" src="{% static 'main_app/images/background/20-207756_messi-vs-real-madrid-wallpaper-lionel-messi-shirt.jpg' %}" alt=""/></a></div>
-							</div>	
+							{% endfor %}
+							
 						</div>
 						<div class="dez-live-match text-white">
 							<div class="m-b20 blog-grid date-style-2">
+								{% for rs in big %}
 								<div class="dez-post-media dez-img-effect zoom-slow"> 
-									<img width="960" height="342" src="{% static 'main_app/images/background/CC-696x391.jpg' %}" alt=""/>
+									<img width="960" height="342" src="{{ rs.image.url }}" alt=""/>
 								</div>
+								{% endfor %}
 								<div class="dez-post-info border-1 p-a20 border-light bg-gray-middle">
 									<div class="dez-post-title ">
 										<h3 class="m-t0 m-b10"><a href="#" class="text-white">Welcome Message</a></h3>
@@ -410,24 +448,22 @@
 						
 						<!-- Latest Match End -->
 							<div class="blog-post blog-md clearfix bg-gray-middle  border-1 border-light p-a15">
-								<div class="dez-post-media dez-img-effect zoom-slow "> <a href="#">
-									<img width="700" height="438" src="{% static 'main_app/images/our-work/pic3.jpg' %}" alt=""></a> 
-								</div>
+								
 								<div class="dez-post-info text-white">
+
 									<div class="dez-post-title ">
-										<h3 class="m-t5"><a href="#" class="text-white">Title of first blog post</a></h3>
+										<h3 class="m-t5"><a href="#" class="text-white">Tearms and Conditions</a></h3>
 									</div>
 									<div class="dez-post-meta ">
-										<ul>
-											<li class="post-date"> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2020</span> </li>
-											<li class="post-author"><i class="fa fa-user"></i>By <a href="#">demongo</a> </li>
-											<li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0</a> </li>
-										</ul>
+										
 									</div>
+									
 									<div class="dez-post-text">
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+										<p>Please read our terms and conditions of service before using the Nobejujubethis.com website.
+										The visitor / user of the pages of the website is considered to visit / use the pages / services of the site only if it fully accepts the following terms:</p>
 									</div>
-									<div class="dez-post-readmore"> <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">READ MORE<i class="fa fa-angle-double-right"></i></a> </div>
+									
+									<div class="dez-post-readmore"> <a href="/policy" title="READ MORE" rel="bookmark" class="site-button-link">PROCEED<i class="fa fa-angle-double-right"></i></a> </div>
 									
 								</div>
 							</div>
@@ -451,15 +487,18 @@
 										<th>W</th> 
 										<th>L</th> 
 									</tr> 
-								</thead> 
+								</thead>
+								
 								<tbody> 
 									<tr> 
+
 										<th scope="row">1</th> 
 										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo1.png' %}" alt=""/></span>Liverpool</td> 
 										<td>10</td> 
 										<td>12</td> 
 										<td>08</td> 
 									</tr>
+								
 									<tr> 
 										<th scope="row">2</th> 
 										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo2.png' %}" alt=""/></span>Chelsea</td> 
@@ -504,98 +543,45 @@
 						<!-- Recent Posts -->
 						<div class="dez-card col-lg-12 col-sm-6">
 							<div class="dez-head-bx skew-triangle right-top m-a-out">
-								<h3 class="text-white m-a0">Recent Posts</h3>
+								<h3 class="text-white m-a0">Recent VIP Games</h3>
 							</div>
 							<div class="home-dez widget recent-posts-entry bg-gray-middle p-a20 border-1 border-light">
+								
 								<div class="widget-post-bx text-white">
+									{% for rs in games %}
 									<div class="widget-post clearfix">
-										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic1.jpg' %}" alt="" width="200" height="143"> </div>
+										
 										<div class="dez-post-info">
 											<div class="dez-post-header">
-												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
+												<h6 class="post-title" style="color: #fff">{% if rs.result == "LOST"  %}  {{ rs.home_team }} vs {{ rs.away_team }} - {{ rs.odds }}  <img height="30px" width="30px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSceOd4YLjKr-U9RzqjCW5yZhRBIYAcr7Dhg&usqp=CAU"> - {{ rs.create_at }} {% elif rs.result == "WON" %} {{ rs.home_team }} vs {{ rs.away_team }} - {{ rs.odds }} <img height="30px" width="30px" src="https://www.freeiconspng.com/thumbs/yes-png/green-yes-check-mark-png-17.png"> - {{ rs.create_at }}{% else %} {% endif %} </a></h6>
 											</div>
-											<div class="dez-post-meta">
-												<ul>
-													<li class="post-author">By <a href="#">Admin</a></li>
-													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-												</ul>
-											</div>
+											
 										</div>
 									</div>
-									<div class="widget-post clearfix">
-										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic2.jpg' %}" alt="" width="200" height="160"> </div>
-										<div class="dez-post-info">
-											<div class="dez-post-header">
-												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
-											</div>
-											<div class="dez-post-meta">
-												<ul>
-													<li class="post-author">By <a href="#">Admin</a></li>
-													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="widget-post clearfix">
-										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic3.jpg' %}" alt="" width="200" height="160"> </div>
-										<div class="dez-post-info">
-											<div class="dez-post-header">
-												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
-											</div>
-											<div class="dez-post-meta">
-												<ul>
-													<li class="post-author">By <a href="#">Admin</a></li>
-													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="widget-post clearfix">
-										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic1.jpg' %}" alt="" width="200" height="160"> </div>
-										<div class="dez-post-info">
-											<div class="dez-post-header">
-												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
-											</div>
-											<div class="dez-post-meta">
-												<ul>
-													<li class="post-author">By <a href="#">Admin</a></li>
-													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="widget-post clearfix">
-										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic2.jpg' %}" alt="" width="200" height="160"> </div>
-										<div class="dez-post-info">
-											<div class="dez-post-header">
-												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
-											</div>
-											<div class="dez-post-meta">
-												<ul>
-													<li class="post-author">By <a href="#">Admin</a></li>
-													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-												</ul>
-											</div>
-										</div>
-									</div>
+									{% endfor %}
+									
 								</div>
 							</div>
-						</div>
 						<!-- Recent Posts END -->
 						<!-- Ads -->
+						
 						<div class="add col-lg-12 col-sm-6 m-b30">
 							<div class="m-b20">
-								<div class="dez-media dez-img-overlay9"><a href=""><img src="{% static 'main_app/images/background/wp6871963.jpg' %}" alt=""/></a></div><br>
-
-								<div class="dez-media dez-img-overlay9"><a href=""><img src="{% static 'main_app/images/MessiRonaldo_Getty_AP_Ringer.jpeg' %}" alt=""/></a></div>
+								{% for rs in side %}
+								<div class="dez-media dez-img-overlay9"><a href=""><img src="{{ rs.image.url }}" alt=""/></a></div><br>
+								{% endfor %}
+								
 							</div>
-							<img width="492" height="487" src="{% static 'main_app/images/background/thumb2-cristiano-ronaldo-aaron-ramsey-paulo-dybala-gonzalo-higuain-matthijs-de-ligt.jpg' %}" alt=""/>
-
+							{% for rs in sides %}
+							<img width="492" height="487" src="{{ rs.image.url }}" alt=""/>
+							{% endfor %}
 
 						</div>
+						
 							
 						<!-- Ads END -->
 						</div>
+					
 					</div>
 				</div>
 			</div>

@@ -7,25 +7,6 @@ from django.urls import reverse
 # Create your views here.
 
 
-def index(request):
-    if request.method == 'POST':
-        form = SubscribeForm(request.POST)
-        if form.is_valid():
-            data = Subscribe()
-            data.email = form.cleaned_data['email']
-
-            data.save()
-            messages.success(request, "Your message has been delivered")
-            return HttpResponseRedirect(reverse("countdown"))
-        else:
-            messages.success(request, "error occured")
-            return HttpResponseRedirect(reverse("countdown"))
-
-    form = ContactForm
-    
-    context = {'form':form}
-   
-    return render(request, 'countdown/countdown.html', context)
 
 
 def contact(request):
@@ -48,6 +29,4 @@ def contact(request):
     context = {'form':form}
     return render(request, 'countdown/contact.html', context)
 
-def about(request):
-    
-    return render(request, 'countdown/about.html')
+

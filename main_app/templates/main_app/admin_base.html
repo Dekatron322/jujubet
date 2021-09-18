@@ -1,0 +1,256 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<link rel="icon" href="" type="image/png" />
+	<!--plugins-->
+	<link href="{% static 'admin_app/plugins/vectormap/jquery-jvectormap-2.0.2.css' %}" rel="stylesheet"/>
+	<link href="{% static 'admin_app/plugins/simplebar/css/simplebar.css' %}" rel="stylesheet" />
+	<link href="{% static 'admin_app/plugins/perfect-scrollbar/css/perfect-scrollbar.css' %}" rel="stylesheet" />
+	<link href="{% static 'admin_app/plugins/metismenu/css/metisMenu.min.css' %}" rel="stylesheet" />
+	<!-- loader-->
+	<link href="{% static 'admin_app/css/pace.min.css' %}" rel="stylesheet" />
+	<script src="{% static 'admin_app/js/pace.min.js' %}"></script>
+	<!-- Bootstrap CSS -->
+	<link href="{% static 'admin_app/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link href="{% static 'admin_app/css/app.css' %}" rel="stylesheet">
+	<link href="{% static 'admin_app/css/icons.css' %}" rel="stylesheet">
+	
+	<title>NoBeJuJuBeThis.com | Admin</title>
+</head>
+<body class="bg-theme bg-theme3">
+	<!--wrapper-->
+	<div class="wrapper">
+		<!--sidebar wrapper -->
+		<div class="sidebar-wrapper" data-simplebar="true">
+			<div class="sidebar-header">
+				
+				<div>
+					<h4 class="logo-text">Admin Page</h4>
+				</div>
+				<div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
+				</div>
+			</div>
+			<!--navigation-->
+			<ul class="metismenu" id="menu">
+				<li>
+					{% url 'boss' as boss %}
+					<a href="{{ boss }}" class="has-arrow {% if boss == request.path %} active {% endif %}">
+						<div class="parent-icon"><i class='bx bx-home-circle'></i>
+						</div>
+						<div class="menu-title">Dashboard</div>
+					</a>
+					
+				</li>
+				<li>
+					{% url 'games' as games %}
+					<a href="{{ games }}" class="has-arrow {% if games == request.path %} active {% endif %}">
+						<div class="parent-icon"><i class="bx bx-category"></i>
+						</div>
+						<div class="menu-title">Upload Games</div>
+					</a>
+					
+				</li>
+
+				<li>
+					{% url 'manage_games' as manage_games %}
+					<a href="{{ manage_games }}" class="has-arrow {% if manage_games == request.path %} active {% endif %}">
+						<div class="parent-icon"><i class="bx bx-category"></i>
+						</div>
+						<div class="menu-title">Manage Games</div>
+					</a>
+					
+				</li>
+
+				
+				
+				<li>
+					{% url 'contact_message' as contact_message %}
+					<a href="{{ contact_message }}" class="has-arrow {% if  contact_message == request.path %} active {% endif %}">
+						<div class="parent-icon"><i class='bx bx-donate-blood'></i>
+						</div>
+						<div class="menu-title">View Users Message</div>
+					</a>
+				</li>
+				<li>
+					{% url 'ads' as ads %}
+					<a class="has-arrow {% if ads == request.path %} active {% endif %}" href="{{ ads }}">
+						<div class="parent-icon"><i class='bx bx-bookmark-heart'></i>
+						</div>
+						<div class="menu-title">Upload Ads</div>
+					</a>
+				</li>
+
+				<li>
+					{% url 'manage_advert' as manage_advert %}
+					<a class="has-arrow {% if manage_advert == request.path %} active {% endif %}" href="{{ manage_advert }}">
+						<div class="parent-icon"><i class='bx bx-bookmark-heart'></i>
+						</div>
+						<div class="menu-title">Manage Adverts</div>
+					</a>
+				</li>
+				<li>
+					{% url 'message' as message %}
+					<a class="has-arrow {% if message == request.path %} active {% endif %}" href="{{ message }}">
+						<div class="parent-icon"><i class="bx bx-repeat"></i>
+						</div>
+						<div class="menu-title">General Message</div>
+					</a>
+					
+				</li>
+
+				<li>
+					{% url 'manage_message' as manage_message %}
+					<a class="has-arrow {% if manage_message == request.path %} active {% endif %}" href="{{ manage_message }}">
+						<div class="parent-icon"><i class="bx bx-repeat"></i>
+						</div>
+						<div class="menu-title">Manage Message</div>
+					</a>
+					
+				</li>
+				
+				
+				<li class="menu-label">Pages</li>
+				<li>
+					<a class="has-arrow" href="javascript:;">
+						<div class="parent-icon"><i class="bx bx-lock"></i>
+						</div>
+						<div class="menu-title">Authentication</div>
+					</a>
+					
+				</li>
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			</ul>
+			<!--end navigation-->
+		</div>
+		<!--end sidebar wrapper -->
+		<!--start header -->
+		<header>
+			<div class="topbar d-flex align-items-center">
+				<nav class="navbar navbar-expand">
+					<div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
+					</div>
+					
+					<div class="top-menu ms-auto">
+						<ul class="navbar-nav align-items-center">
+							
+							<li class="nav-item dropdown dropdown-large">
+								
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<div class="row row-cols-3 g-3 p-3">
+										
+										
+										
+										
+										
+										
+									</div>
+								</div>
+							</li>
+							<li class="nav-item dropdown dropdown-large">
+								
+								<div class="dropdown-menu dropdown-menu-end">
+									
+									<div class="header-notifications-list">
+										
+									</div>
+									
+								</div>
+							</li>
+							<li class="nav-item dropdown dropdown-large">
+								
+								<div class="dropdown-menu dropdown-menu-end">
+									
+									<div class="header-message-list">	
+										
+									</div>
+									<a href="javascript:;">
+										<div class="text-center msg-footer">View All Messages</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="user-box dropdown">
+						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="{% static 'admin_app/images/avatars/avatar-2.png' %}" class="user-img" alt="user avatar">
+							<div class="user-info ps-3">
+								<p class="user-name mb-0">OJ</p>
+								<p class="designattion mb-0">CEO NoBeJujuBethis</p>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class="bx bx-cog"></i><span>Settings</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-home-circle'></i><span>Dashboard</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-dollar-circle'></i><span>Earnings</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-download'></i><span>Downloads</span></a>
+							</li>
+							<li>
+								<div class="dropdown-divider mb-0"></div>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Logout</span></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<!--end header -->
+
+{% block content %}
+
+{% endblock %}
+
+		<footer class="page-footer">
+			<p class="mb-0">Copyright © 2021. All right reserved.</p>
+		</footer>
+	</div>
+	<!--end wrapper-->
+	<!--start switcher-->
+	
+	<!--end switcher-->
+	<!-- Bootstrap JS -->
+	<script src="{% static 'admin_app/js/bootstrap.bundle.min.js' %}"></script>
+	<!--plugins-->
+	<script src="{% static 'admin_app/js/jquery.min.js' %}"></script>
+	<script src="{% static 'admin_app/plugins/simplebar/js/simplebar.min.js' %}"></script>
+	<script src="{% static 'admin_app/plugins/metismenu/js/metisMenu.min.js' %}"></script>
+	<script src="{% static 'admin_app/plugins/perfect-scrollbar/js/perfect-scrollbar.js' %}"></script>
+	<script src="{% static 'admin_app/plugins/chartjs/js/Chart.min.js' %}"></script>
+	<script src="{% static 'admin_app/plugins/vectormap/jquery-jvectormap-2.0.2.min.js' %}"></script>
+    <script src="{% static 'admin_app/plugins/vectormap/jquery-jvectormap-world-mill-en.js' %}"></script>
+	<script src="{% static 'admin_app/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js' %}"></script>
+	<script src="{% static 'admin_app/plugins/sparkline-charts/jquery.sparkline.min.js' %}"></script>
+	<script src="{% static 'admin_app/plugins/jquery-knob/excanvas.js' %}"></script>
+	<script src="{% static 'admin_app/plugins/jquery-knob/jquery.knob.js' %}"></script>
+	  <script>
+		  $(function() {
+			  $(".knob").knob();
+		  });
+	  </script>
+	  <script src="{% static 'admin_app/js/index.js' %}"></script>
+	<!--app JS-->
+	<script src="{% static 'admin_app/js/app.js' %}"></script>
+</body>
+
+</html>

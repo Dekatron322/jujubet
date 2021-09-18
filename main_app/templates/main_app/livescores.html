@@ -22,26 +22,28 @@
 
     <br><br>
     <div class="row">
-      {% for meal in all_meals %}
+      <div class="row">
+      {% for i in events %}
         <div class="col-md-4 col-sm-6 col-lg-3">
           <div class="card">
-            <img class="card-img-top" src="{{ meal.image_url }}" alt="Card image cap">
+           
             <div class="card-body text-center">
-              <p class="card-title">{{ meal.name }}</p>
-              <hr>
-              <p class="card-text">{{ meal.region }}</p>
-              <a href="/meals/{{meal.id}}"
-              ><input
-                type="submit"
-                value="Learn More"
-                class="btn btn-danger btn-sm"
-                type="button"
-            /></a>
+              <p class="card-title">{{ i.tournament.name }}</p>
+             <p class="card-title">{{ i.tournament.category.sport.name }}</p> 
+             <p class="card-title">{{ i.tournament.uniqueTournament.name }}</p>
+             <p class="card-title">{{ i.roundInfo.round }}</p>
+
+             <p class="card-title">{{ i.status.description }} {{ i.status.type }}</p>
+
+             <p class="card-title">{{ i.homeTeam.name }} {{ i.homeScore.current }}  vs {{ i.awayScore.current }} {{ i.awayTeam.name }}</p> <span style="color: {{ i.homeTeam.teamColors.secondary }}">xxx</span>
+
+             <img src="{{ i.tournament.category.sport.flag }}">
             </div>
           </div>
           <br><br><br>
         </div>
       {% endfor %}
+    </div>
     </div>
   </div>
 

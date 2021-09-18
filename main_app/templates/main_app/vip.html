@@ -68,62 +68,16 @@
 									</tr> 
 								</thead> 
 								<tbody> 
+									{% for rs in games %}
 									<tr> 
-										<th scope="row">1</th> 
-										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo1.png' %}" alt=""/></span>Liverpool vs Chelsea <span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo2.png' %}" alt=""/></span></td> 
-										<td>1:30pm</td> 
-										<td>4 - 6 Goals</td> 
-										<td>2.54</td> 
+										<th scope="row">{{ forloop.counter }}</th> 
+										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo1.png' %}" alt=""/></span>{{ rs.home_team }} vs {{ rs.away_team }} <span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo2.png' %}" alt=""/></span></td> 
+										<td>{{ rs.league }}</td> 
+										<td>{{ rs.tip }}</td> 
+										<td>{{ rs.odds }}</td> 
 									</tr>
-									<tr> 
-										<th scope="row">2</th> 
-										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo1.png' %}" alt=""/></span>Anton Villa vs Norwich <span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo2.png' %}" alt=""/></span></td> 
-										<td>3:30pm</td> 
-										<td>Under 5 Goals</td> 
-										<td>4.44</td> 
-									</tr>
-									<tr> 
-										<th scope="row">2</th> 
-										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo1.png' %}" alt=""/></span>Anton Villa vs Norwich <span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo2.png' %}" alt=""/></span></td> 
-										<td>3:30pm</td> 
-										<td>Under 5 Goals</td> 
-										<td>4.44</td>  
-									</tr>
-									<tr> 
-										<th scope="row">2</th> 
-										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo1.png' %}" alt=""/></span>Anton Villa vs Norwich <span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo2.png' %}" alt=""/></span></td> 
-										<td>3:30pm</td> 
-										<td>Under 5 Goals</td> 
-										<td>4.44</td>  
-									</tr>
-									<tr> 
-										<th scope="row">2</th> 
-										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo1.png' %}" alt=""/></span>Anton Villa vs Norwich <span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo2.png' %}" alt=""/></span></td> 
-										<td>3:30pm</td> 
-										<td>Under 5 Goals</td> 
-										<td>4.44</td>  
-									</tr>
-									<tr> 
-										<th scope="row">2</th> 
-										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo1.png' %}" alt=""/></span>Anton Villa vs Norwich <span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo2.png' %}" alt=""/></span></td> 
-										<td>3:30pm</td> 
-										<td>Under 5 Goals</td> 
-										<td>4.44</td> 
-									</tr>
-									<tr> 
-										<th scope="row">2</th> 
-										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo1.png' %}" alt=""/></span>Anton Villa vs Norwich <span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo2.png' %}" alt=""/></span></td> 
-										<td>3:30pm</td> 
-										<td>Under 5 Goals</td> 
-										<td>4.44</td> 
-									</tr>
-									<tr> 
-										<th scope="row">2</th> 
-										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo1.png' %}" alt=""/></span>Anton Villa vs Norwich <span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo2.png' %}" alt=""/></span></td> 
-										<td>3:30pm</td> 
-										<td>Under 5 Goals</td> 
-										<td>4.44</td> 
-									</tr>
+									{% endfor %}
+									
 								</tbody> 
 							</table>
 						</div>
@@ -268,80 +222,23 @@
 						<!-- Recent Posts -->
 						<div class="dez-card col-lg-12 col-sm-6">
 							<div class="dez-head-bx skew-triangle right-top m-a-out">
-								<h3 class="text-white m-a0">Recent Posts</h3>
+								<h3 class="text-white m-a0">RECENT TIPS</h3>
 							</div>
 							<div class="home-dez widget recent-posts-entry bg-gray-middle p-a20 border-1 border-light">
+								
 								<div class="widget-post-bx text-white">
+									{% for rs in games %}
 									<div class="widget-post clearfix">
-										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic1.jpg' %}" alt="" width="200" height="143"> </div>
+										
 										<div class="dez-post-info">
 											<div class="dez-post-header">
-												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
+												<h6 class="post-title" style="color: #fff">{% if rs.result == "LOST"  %}  {{ rs.home_team }} vs {{ rs.away_team }} - {{ rs.odds }}  <img height="30px" width="30px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSceOd4YLjKr-U9RzqjCW5yZhRBIYAcr7Dhg&usqp=CAU"> {% elif rs.result == "WON" %} {{ rs.home_team }} vs {{ rs.away_team }} - {{ rs.odds }} <img height="30px" width="30px" src="https://www.freeiconspng.com/thumbs/yes-png/green-yes-check-mark-png-17.png">{% else %} {% endif %}</a></h6>
 											</div>
-											<div class="dez-post-meta">
-												<ul>
-													<li class="post-author">By <a href="#">Admin</a></li>
-													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-												</ul>
-											</div>
+											
 										</div>
 									</div>
-									<div class="widget-post clearfix">
-										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic2.jpg' %}" alt="" width="200" height="160"> </div>
-										<div class="dez-post-info">
-											<div class="dez-post-header">
-												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
-											</div>
-											<div class="dez-post-meta">
-												<ul>
-													<li class="post-author">By <a href="#">Admin</a></li>
-													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="widget-post clearfix">
-										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic3.jpg' %}" alt="" width="200" height="160"> </div>
-										<div class="dez-post-info">
-											<div class="dez-post-header">
-												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
-											</div>
-											<div class="dez-post-meta">
-												<ul>
-													<li class="post-author">By <a href="#">Admin</a></li>
-													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="widget-post clearfix">
-										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic1.jpg' %}" alt="" width="200" height="160"> </div>
-										<div class="dez-post-info">
-											<div class="dez-post-header">
-												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
-											</div>
-											<div class="dez-post-meta">
-												<ul>
-													<li class="post-author">By <a href="#">Admin</a></li>
-													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="widget-post clearfix">
-										<div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic2.jpg' %}" alt="" width="200" height="160"> </div>
-										<div class="dez-post-info">
-											<div class="dez-post-header">
-												<h6 class="post-title"><a href="#">Title of first blog post entry</a></h6>
-											</div>
-											<div class="dez-post-meta">
-												<ul>
-													<li class="post-author">By <a href="#">Admin</a></li>
-													<li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-												</ul>
-											</div>
-										</div>
-									</div>
+									{% endfor %}
+									
 								</div>
 							</div>
 						</div>
