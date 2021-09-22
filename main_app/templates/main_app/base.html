@@ -14,7 +14,7 @@
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- Favicons Icon -->
-	<link rel="icon" href="" type="image/x-icon" />
+	<link rel="icon" href="https://www.pngitem.com/pimgs/m/614-6144568_football-player-vector-graphics-clip-art-illustration-football.png" type="image/x-icon" />
 	<link rel="shortcut icon" type="image/x-icon" href="" />
 	
 	<!-- Page Title Here -->
@@ -105,10 +105,16 @@
 								{% url 'about' as about %}
 								<li class="{% if about == request.path %} active {% endif %}"> <a href="{{ about }}">About Us</a></li>
 								{% url 'faq' as faq %}
+
+								{% url 'livescores' as livescores %}
+								<li class="{% if livescores == request.path %} active {% endif %}"> <a href="{{ livescores }}">Livescores
+								</a></li>
+
 								<li class="{% if faq == request.path %} active {% endif %}"> <a href="{{ faq }}">FAQs</a></li>
 								{% url 'contact' as contact %}
 								<li class="{% if contact == request.path %} active {% endif %}"> <a href="{{ contact }}">Contact
 								</a></li>
+								
 								{% url 'subscribe' as subscribe %}
 								<li class="{% if subscribe == request.path %} active {% endif %}"> <a href="{{ subscribe }}">Subscribe</a></li>
 								
@@ -170,53 +176,16 @@
 
                     </div>
                     <div class="col-lg-3 col-sm-6 footer-col-4">
-                        <div class="widget recent-posts-entry">
-                            <h4 class="m-b15 text-uppercase">Recent Post</h4>
-							<div class="dez-separator bg-primary"></div>
-                            <div class="widget-post-bx">
-                                <div class="widget-post clearfix">
-                                    <div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic1.jpg' %}" alt="" width="200" height="143"> </div>
-                                    <div class="dez-post-info">
-                                        <div class="dez-post-header">
-                                            <h6 class="post-title"><a href="blog-single.html">Title of first blog</a></h6>
-                                        </div>
-                                        <div class="dez-post-meta">
-                                            <ul>
-                                                <li class="post-author">By <a href="#">Admin</a></li>
-                                                <li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="widget-post clearfix">
-                                    <div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic2.jpg' %}" alt="" width="200" height="160"> </div>
-                                    <div class="dez-post-info">
-                                        <div class="dez-post-header">
-                                            <h6 class="post-title"><a href="blog-single.html">Title of first blog</a></h6>
-                                        </div>
-                                        <div class="dez-post-meta">
-                                            <ul>
-                                                <li class="post-author">By <a href="#">Admin</a></li>
-                                                <li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="widget-post clearfix">
-                                    <div class="dez-post-media"> <img src="{% static 'main_app/images/blog/recent-blog/pic3.jpg' %}" alt="" width="200" height="160"> </div>
-                                    <div class="dez-post-info">
-                                        <div class="dez-post-header">
-                                            <h6 class="post-title"><a href="blog-single.html">Title of first blog</a></h6>
-                                        </div>
-                                        <div class="dez-post-meta">
-                                            <ul>
-                                                <li class="post-author">By <a href="#">Admin</a></li>
-                                                <li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="widget widget_services">
+                            <h4 class="m-b15 text-uppercase">About Us</h4>
+                            <div class="dez-separator bg-primary"></div>
+                            <ul>
+                                
+                                <li><a href="/policy/">Privacy Policy</a></li>
+                                <li><a href="/about/">About Us</a></li>
+                                <li><a href="/contact/">Contact Us</a></li>
+                                
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 footer-col-4">
@@ -225,17 +194,14 @@
                             <div class="dez-separator bg-primary"></div>
                             <ul>
                                 <li><a href="/vip/">Vip</a></li>
-                                <li><a href="/policy/">Privacy Policy</a></li>
-                                <li><a href="/faq/">Frequency Asked Questions</a></li>
-                                <li><a href="/about/">About Us</a></li>
-                                <li><a href="/contact/">Contact Us</a></li>
+                                <li><a href="/policy/">Privacy Policy</a></li> 
                                 <li><a href="/subscribe/">Subscribe</a></li>
                             </ul>
                         </div>
                     </div>
 					<div class="col-lg-3 col-sm-6 footer-col-4">
 						<div class="widget widget_gallery">
-							<h4 class="m-b15 text-uppercase">PHOTOS FROM FLICKR</h4>
+							<h4 class="m-b15 text-uppercase">PHOTOS FROM ADS</h4>
 							<div class="dez-separator bg-primary"></div>
 							<ul>{% for rs in footer %}
 								<li class="img-effect2"> <a href="{{ rs.link }}"><img src="{{ rs.image.url }}" alt=""></a> </li>

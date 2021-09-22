@@ -6,28 +6,20 @@
 		<!-- Next Match -->
 		<div class="row bg-gray-middle m-lr0" style="background-image: url({% static 'main_app/images/background/8cf093d06bb060ff91770fcec13d2e32.jpg' %}); background-position:right top -50px; background-size: 52% auto;">
 			<div class="col-lg-6 bg-primary p-tb30 text-center ">
-				<h2 class="m-a0 m-b15 text-black">Next Match</h2>
+				<h2 class="m-a0 m-b15 text-black">NoBeJujuBeThis</h2>
 				<div class="countdown dez-style-3 text-center m-b10">
 					<div class="date">
-						<span class="time days"></span>
-						<span class="time-counting">Days</span>
+						<span class="time dayxxs">VIPS</span>
+						<span class="time-counting"></span>
 					</div>
 					<div class="date">
-						<span class="time hours"></span>
-						<span class="time-counting">Hours</span>
+						<span class="time hoursddds">Section</span>
+						<span class="time-counting"></span>
 					</div>
-					<div class="date">
-						<span class="time mins"></span>
-						<span class="time-counting">Minutess</span>
-					</div>
-					<div class="date">
-						<span class="time secs"></span>
-						<span class="time-counting">Second</span>
-					</div>
+					
+					
 				</div>
-				<div class="text-black text-center">
-					<span class="font-18">30/03/2020 /16:00AM</span>
-				</div>
+				
 			</div>
 			<div class="col-lg-6 p-tb30" >
 				<div class="row team-compact clearfix">
@@ -53,9 +45,11 @@
 						
 						
 						<!-- Match Overview -->
+						{% for rs in games %}
+						{% if rs.odds == ""  %} {% else %}
 						<div class="dez-card">
 							<div class="dez-head-bx skew-triangle right-top m-a-out">
-								<h3 class="text-white m-a0">Todays Odds</h3>
+								<h3 class="text-white m-a0">Prediction Single</h3>
 							</div>
 							<table class="table table-bordered  border-light dez-score-table bg-white"> 
 								<thead> 
@@ -76,11 +70,829 @@
 										<td>{{ rs.tip }}</td> 
 										<td>{{ rs.odds }}</td> 
 									</tr>
+
+									<tr> 
+										<th scope="row">2</th> 
+										<td>{{ rs.a_home_team }} vs {{ rs.a_away_team }} </td> 
+										<td>{{ rs.a_league }}</td> 
+										<td>{{ rs.a_tip }}</td> 
+										<td>{{ rs.a_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">3</th> 
+										<td>{{ rs.b_home_team }} vs {{ rs.b_away_team }} </td> 
+										<td>{{ rs.b_league }}</td> 
+										<td>{{ rs.b_tip }}</td> 
+										<td>{{ rs.b_odds }}</td> 
+									</tr>
+									<tr> 
+										<th scope="row">4</th> 
+										<td>{{ rs.c_home_team }} vs {{ rs.c_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.c_league }}</td> 
+										<td>{{ rs.c_tip }}</td> 
+										<td>{{ rs.c_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">5</th> 
+										<td>{{ rs.d_home_team }} vs {{ rs.d_away_team }} </td> 
+										<td>{{ rs.d_league }}</td> 
+										<td>{{ rs.d_tip }}</td> 
+										<td>{{ rs.d_odds }}</td> 
+									</tr>
 									{% endfor %}
 									
 								</tbody> 
 							</table>
 						</div>
+						{% endif %}
+						{% endfor %}
+						{% for rs in games %}
+						{% if rs.dB_odds == ""  %} {% else %}
+						<!-- Match Overview -->
+						<div class="dez-card">
+							<div class="dez-head-bx skew-triangle right-top m-a-out">
+								<h3 class="text-white m-a0">Prediction Double</h3>
+							</div>
+							<table class="table table-bordered  border-light dez-score-table bg-white"> 
+								<thead> 
+									<tr class=""> 
+										<th>C</th> 
+										<th>Team</th> 
+										<th>Time</th> 
+										<th>Tip</th> 
+										<th>Odds</th> 
+									</tr> 
+								</thead> 
+								<tbody> 
+									{% for rs in games %}
+									<tr> 
+										<th scope="row">1</th> 
+										<td>{{ rs.dA_home_team }} vs {{ rs.dA_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.dA_league }}</td> 
+										<td>{{ rs.dA_tip }}</td> 
+										<td>{{ rs.dA_odds }}</td> 
+									</tr>
+									<tr> 
+										<th scope="row">2</th> 
+										<td>{{ rs.dB_home_team }} vs {{ rs.dB_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.dB_league }}</td> 
+										<td>{{ rs.dB_tip }}</td> 
+										<td>{{ rs.dB_odds }}</td> 
+									</tr>
+									{% endfor %}
+									
+								</tbody> 
+							</table>
+						</div>
+						{% endif %}
+						{% endfor %}
+
+						{% for rs in games %}
+						{% if rs.tC_odds == "None"  %} {% elif rs.tC_odds == "" %} {% else %}
+						<!-- Match Overview -->
+						<div class="dez-card">
+							<div class="dez-head-bx skew-triangle right-top m-a-out">
+								<h3 class="text-white m-a0">Prediction Multiple 1/3</h3>
+							</div>
+							<table class="table table-bordered  border-light dez-score-table bg-white"> 
+								<thead> 
+									<tr class=""> 
+										<th>C</th> 
+										<th>Team</th> 
+										<th>Time</th> 
+										<th>Tip</th> 
+										<th>Odds</th> 
+									</tr> 
+								</thead> 
+								<tbody> 
+									{% for rs in games %}
+									<tr> 
+										<th scope="row">1</th> 
+										<td>{{ rs.tA_home_team }} vs {{ rs.tA_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.tA_league }}</td> 
+										<td>{{ rs.tA_tip }}</td> 
+										<td>{{ rs.tA_odds }}</td> 
+									</tr>
+									<tr> 
+										<th scope="row">2</th> 
+										<td>{{ rs.tB_home_team }} vs {{ rs.tB_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.tB_league }}</td> 
+										<td>{{ rs.tB_tip }}</td> 
+										<td>{{ rs.tB_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">3</th> 
+										<td>{{ rs.tC_home_team }} vs {{ rs.tC_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.tC_league }}</td> 
+										<td>{{ rs.tC_tip }}</td> 
+										<td>{{ rs.tC_odds }}</td> 
+									</tr>
+									{% endfor %}
+									
+								</tbody> 
+							</table>
+						</div>
+						{% endif %}
+						{% endfor %}
+
+						{% for rs in games %}
+						{% if rs.fC_odds == "None"  %} {% elif rs.fC_odds == "" %} {% else %}
+						<!-- Match Overview -->
+						<div class="dez-card">
+							<div class="dez-head-bx skew-triangle right-top m-a-out">
+								<h3 class="text-white m-a0">Prediction Multiple 1/4</h3>
+							</div>
+							<table class="table table-bordered  border-light dez-score-table bg-white"> 
+								<thead> 
+									<tr class=""> 
+										<th>C</th> 
+										<th>Team</th> 
+										<th>Time</th> 
+										<th>Tip</th> 
+										<th>Odds</th> 
+									</tr> 
+								</thead> 
+								<tbody> 
+									{% for rs in games %}
+									<tr> 
+										<th scope="row">1</th> 
+										<td>{{ rs.fA_home_team }} vs {{ rs.fA_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.fA_league }}</td> 
+										<td>{{ rs.fA_tip }}</td> 
+										<td>{{ rs.fA_odds }}</td> 
+									</tr>
+									<tr> 
+										<th scope="row">2</th> 
+										<td>{{ rs.fB_home_team }} vs {{ rs.fB_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.fB_league }}</td> 
+										<td>{{ rs.fB_tip }}</td> 
+										<td>{{ rs.fB_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">3</th> 
+										<td>{{ rs.fC_home_team }} vs {{ rs.fC_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.fC_league }}</td> 
+										<td>{{ rs.fC_tip }}</td> 
+										<td>{{ rs.fC_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">4</th> 
+										<td>{{ rs.fD_home_team }} vs {{ rs.fD_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.fD_league }}</td> 
+										<td>{{ rs.fD_tip }}</td> 
+										<td>{{ rs.fD_odds }}</td> 
+									</tr>
+									{% endfor %}
+									
+								</tbody> 
+							</table>
+						</div>
+						{% endif %}
+						{% endfor %}
+
+						{% for rs in games %}
+						{% if rs.ffD_odds == "None"  %} {% elif rs.ffD_odds == "" %} {% else %}
+						<!-- Match Overview -->
+						<div class="dez-card">
+							<div class="dez-head-bx skew-triangle right-top m-a-out">
+								<h3 class="text-white m-a0">Prediction Multiple 1/5</h3>
+							</div>
+							<table class="table table-bordered  border-light dez-score-table bg-white"> 
+								<thead> 
+									<tr class=""> 
+										<th>C</th> 
+										<th>Team</th> 
+										<th>Time</th> 
+										<th>Tip</th> 
+										<th>Odds</th> 
+									</tr> 
+								</thead> 
+								<tbody> 
+									{% for rs in games %}
+									<tr> 
+										<th scope="row">1</th> 
+										<td>{{ rs.ffA_home_team }} vs {{ rs.ffA_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ffA_league }}</td> 
+										<td>{{ rs.ffA_tip }}</td> 
+										<td>{{ rs.ffA_odds }}</td> 
+									</tr>
+									<tr> 
+										<th scope="row">2</th> 
+										<td>{{ rs.ffB_home_team }} vs {{ rs.ffB_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ffB_league }}</td> 
+										<td>{{ rs.ffB_tip }}</td> 
+										<td>{{ rs.ffB_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">3</th> 
+										<td>{{ rs.ffC_home_team }} vs {{ rs.ffC_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ffC_league }}</td> 
+										<td>{{ rs.ffC_tip }}</td> 
+										<td>{{ rs.ffC_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">4</th> 
+										<td>{{ rs.ffD_home_team }} vs {{ rs.ffD_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ffD_league }}</td> 
+										<td>{{ rs.ffD_tip }}</td> 
+										<td>{{ rs.ffD_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">5</th> 
+										<td>{{ rs.ffE_home_team }} vs {{ rs.ffE_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ffE_league }}</td> 
+										<td>{{ rs.ffE_tip }}</td> 
+										<td>{{ rs.ffE_odds }}</td> 
+									</tr>
+									{% endfor %}
+									
+								</tbody> 
+							</table>
+						</div>
+						{% endif %}
+						{% endfor %}
+
+						{% for rs in games %}
+						{% if rs.siD_odds == "None"  %} {% elif rs.siD_odds == "" %} {% else %}
+						<!-- Match Overview -->
+						<div class="dez-card">
+							<div class="dez-head-bx skew-triangle right-top m-a-out">
+								<h3 class="text-white m-a0">Prediction Multiple 1/6</h3>
+							</div>
+							<table class="table table-bordered  border-light dez-score-table bg-white"> 
+								<thead> 
+									<tr class=""> 
+										<th>C</th> 
+										<th>Team</th> 
+										<th>Time</th> 
+										<th>Tip</th> 
+										<th>Odds</th> 
+									</tr> 
+								</thead> 
+								<tbody> 
+									{% for rs in games %}
+									<tr> 
+										<th scope="row">1</th> 
+										<td>{{ rs.siA_home_team }} vs {{ rs.siA_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.siA_league }}</td> 
+										<td>{{ rs.siA_tip }}</td> 
+										<td>{{ rs.siA_odds }}</td> 
+									</tr>
+									<tr> 
+										<th scope="row">2</th> 
+										<td>{{ rs.siB_home_team }} vs {{ rs.siB_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.siB_league }}</td> 
+										<td>{{ rs.siB_tip }}</td> 
+										<td>{{ rs.siB_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">3</th> 
+										<td>{{ rs.siC_home_team }} vs {{ rs.siC_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.siC_league }}</td> 
+										<td>{{ rs.siC_tip }}</td> 
+										<td>{{ rs.siC_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">4</th> 
+										<td>{{ rs.siD_home_team }} vs {{ rs.siD_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.siD_league }}</td> 
+										<td>{{ rs.siD_tip }}</td> 
+										<td>{{ rs.siD_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">5</th> 
+										<td>{{ rs.siE_home_team }} vs {{ rs.siE_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.siE_league }}</td> 
+										<td>{{ rs.siE_tip }}</td> 
+										<td>{{ rs.siE_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">6</th> 
+										<td>{{ rs.siF_home_team }} vs {{ rs.siF_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.siF_league }}</td> 
+										<td>{{ rs.siF_tip }}</td> 
+										<td>{{ rs.siF_odds }}</td> 
+									</tr>
+									{% endfor %}
+									
+								</tbody> 
+							</table>
+						</div>
+						{% endif %}
+						{% endfor %}
+
+						{% for rs in games %}
+						{% if rs.sD_odds == "None"  %} {% elif rs.sD_odds == "" %} {% else %}
+						<!-- Match Overview -->
+						<div class="dez-card">
+							<div class="dez-head-bx skew-triangle right-top m-a-out">
+								<h3 class="text-white m-a0">Prediction Multiple 1/7</h3>
+							</div>
+							<table class="table table-bordered  border-light dez-score-table bg-white"> 
+								<thead> 
+									<tr class=""> 
+										<th>C</th> 
+										<th>Team</th> 
+										<th>Time</th> 
+										<th>Tip</th> 
+										<th>Odds</th> 
+									</tr> 
+								</thead> 
+								<tbody> 
+									{% for rs in games %}
+									<tr> 
+										<th scope="row">1</th> 
+										<td>{{ rs.sA_home_team }} vs {{ rs.sA_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.sA_league }}</td> 
+										<td>{{ rs.sA_tip }}</td> 
+										<td>{{ rs.sA_odds }}</td> 
+									</tr>
+									<tr> 
+										<th scope="row">2</th> 
+										<td>{{ rs.sB_home_team }} vs {{ rs.sB_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.sB_league }}</td> 
+										<td>{{ rs.sB_tip }}</td> 
+										<td>{{ rs.sB_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">3</th> 
+										<td>{{ rs.sC_home_team }} vs {{ rs.sC_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.sC_league }}</td> 
+										<td>{{ rs.sC_tip }}</td> 
+										<td>{{ rs.sC_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">4</th> 
+										<td>{{ rs.sD_home_team }} vs {{ rs.sD_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.sD_league }}</td> 
+										<td>{{ rs.sD_tip }}</td> 
+										<td>{{ rs.sD_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">5</th> 
+										<td>{{ rs.sE_home_team }} vs {{ rs.sE_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.sE_league }}</td> 
+										<td>{{ rs.sE_tip }}</td> 
+										<td>{{ rs.sE_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">6</th> 
+										<td>{{ rs.sF_home_team }} vs {{ rs.sF_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.sF_league }}</td> 
+										<td>{{ rs.sF_tip }}</td> 
+										<td>{{ rs.sF_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">7</th> 
+										<td>{{ rs.gF_home_team }} vs {{ rs.gF_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.gF_league }}</td> 
+										<td>{{ rs.gF_tip }}</td> 
+										<td>{{ rs.gF_odds }}</td> 
+									</tr>
+									{% endfor %}
+									
+								</tbody> 
+							</table>
+						</div>
+						{% endif %}
+						{% endfor %}
+
+						{% for rs in games %}
+						{% if rs.ccD_odds == "None"  %} {% elif rs.ccD_odds == "" %} {% else %}
+						<!-- Match Overview -->
+						<div class="dez-card">
+							<div class="dez-head-bx skew-triangle right-top m-a-out">
+								<h3 class="text-white m-a0">Correct Score</h3>
+							</div>
+							<table class="table table-bordered  border-light dez-score-table bg-white"> 
+								<thead> 
+									<tr class=""> 
+										<th>C</th> 
+										<th>Team</th> 
+										<th>Time</th> 
+										<th>Tip</th> 
+										<th>Odds</th> 
+									</tr> 
+								</thead> 
+								<tbody> 
+									{% for rs in games %}
+									<tr> 
+										<th scope="row">1</th> 
+										<td>{{ rs.ccA_home_team }} vs {{ rs.ccA_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ccA_league }}</td> 
+										<td>{{ rs.ccA_tip }}</td> 
+										<td>{{ rs.ccA_odds }}</td> 
+									</tr>
+									<tr> 
+										<th scope="row">2</th> 
+										<td>{{ rs.ccB_home_team }} vs {{ rs.ccB_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ccB_league }}</td> 
+										<td>{{ rs.ccB_tip }}</td> 
+										<td>{{ rs.ccB_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">3</th> 
+										<td>{{ rs.ccC_home_team }} vs {{ rs.ccC_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ccC_league }}</td> 
+										<td>{{ rs.ccC_tip }}</td> 
+										<td>{{ rs.ccC_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">4</th> 
+										<td>{{ rs.ccD_home_team }} vs {{ rs.ccD_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ccD_league }}</td> 
+										<td>{{ rs.ccD_tip }}</td> 
+										<td>{{ rs.ccD_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">5</th> 
+										<td>{{ rs.ccE_home_team }} vs {{ rs.ccE_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ccE_league }}</td> 
+										<td>{{ rs.ccE_tip }}</td> 
+										<td>{{ rs.ccE_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">6</th> 
+										<td>{{ rs.ccF_home_team }} vs {{ rs.ccF_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ccF_league }}</td> 
+										<td>{{ rs.ccF_tip }}</td> 
+										<td>{{ rs.ccF_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">7</th> 
+										<td>{{ rs.ccG_home_team }} vs {{ rs.ccG_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ccG_league }}</td> 
+										<td>{{ rs.ccG_tip }}</td> 
+										<td>{{ rs.ccG_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">8</th> 
+										<td>{{ rs.ccH_home_team }} vs {{ rs.ccH_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ccH_league }}</td> 
+										<td>{{ rs.ccH_tip }}</td> 
+										<td>{{ rs.ccH_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">9</th> 
+										<td>{{ rs.ccI_home_team }} vs {{ rs.ccI_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ccI_league }}</td> 
+										<td>{{ rs.ccI_tip }}</td> 
+										<td>{{ rs.ccI_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">10</th> 
+										<td>{{ rs.ccJ_home_team }} vs {{ rs.ccJ_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ccJ_league }}</td> 
+										<td>{{ rs.ccJ_tip }}</td> 
+										<td>{{ rs.ccJ_odds }}</td> 
+									</tr>
+									{% endfor %}
+									
+								</tbody> 
+							</table>
+						</div>
+						{% endif %}
+						{% endfor %}
+
+						{% for rs in games %}
+						{% if rs.ggD_odds == "None"  %} {% elif rs.ggD_odds == "" %} {% else %}
+						<!-- Match Overview -->
+						<div class="dez-card">
+							<div class="dez-head-bx skew-triangle right-top m-a-out">
+								<h3 class="text-white m-a0">Both Teams to Score</h3>
+							</div>
+							<table class="table table-bordered  border-light dez-score-table bg-white"> 
+								<thead> 
+									<tr class=""> 
+										<th>C</th> 
+										<th>Team</th> 
+										<th>Time</th> 
+										<th>Tip</th> 
+										<th>Odds</th> 
+									</tr> 
+								</thead> 
+								<tbody> 
+									{% for rs in games %}
+									<tr> 
+										<th scope="row">1</th> 
+										<td>{{ rs.ggA_home_team }} vs {{ rs.ggA_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ggA_league }}</td> 
+										<td>{{ rs.ggA_tip }}</td> 
+										<td>{{ rs.ggA_odds }}</td> 
+									</tr>
+									<tr> 
+										<th scope="row">2</th> 
+										<td>{{ rs.ggB_home_team }} vs {{ rs.ggB_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ggB_league }}</td> 
+										<td>{{ rs.ggB_tip }}</td> 
+										<td>{{ rs.ggB_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">3</th> 
+										<td>{{ rs.ggC_home_team }} vs {{ rs.ggC_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ggC_league }}</td> 
+										<td>{{ rs.ggC_tip }}</td> 
+										<td>{{ rs.ggC_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">4</th> 
+										<td>{{ rs.ggD_home_team }} vs {{ rs.ggD_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ggD_league }}</td> 
+										<td>{{ rs.ggD_tip }}</td> 
+										<td>{{ rs.ggD_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">5</th> 
+										<td>{{ rs.ggE_home_team }} vs {{ rs.ggE_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ggE_league }}</td> 
+										<td>{{ rs.ggE_tip }}</td> 
+										<td>{{ rs.ggE_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">6</th> 
+										<td>{{ rs.ggF_home_team }} vs {{ rs.ggF_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ggF_league }}</td> 
+										<td>{{ rs.ggF_tip }}</td> 
+										<td>{{ rs.ggF_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">7</th> 
+										<td>{{ rs.ggG_home_team }} vs {{ rs.ggG_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ggG_league }}</td> 
+										<td>{{ rs.ggG_tip }}</td> 
+										<td>{{ rs.ggG_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">8</th> 
+										<td>{{ rs.ggH_home_team }} vs {{ rs.ggH_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ggH_league }}</td> 
+										<td>{{ rs.ggH_tip }}</td> 
+										<td>{{ rs.ggH_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">9</th> 
+										<td>{{ rs.ggI_home_team }} vs {{ rs.ggI_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ggI_league }}</td> 
+										<td>{{ rs.ggI_tip }}</td> 
+										<td>{{ rs.ggI_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">10</th> 
+										<td>{{ rs.ggJ_home_team }} vs {{ rs.ggJ_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ggJ_league }}</td> 
+										<td>{{ rs.ggJ_tip }}</td> 
+										<td>{{ rs.ggJ_odds }}</td> 
+									</tr>
+									{% endfor %}
+									
+								</tbody> 
+							</table>
+						</div>
+						{% endif %}
+						{% endfor %}
+
+						{% for rs in games %}
+						{% if rs.htD_odds == "None"  %} {% elif rs.htD_odds == "" %} {% else %}
+						<!-- Match Overview -->
+						<div class="dez-card">
+							<div class="dez-head-bx skew-triangle right-top m-a-out">
+								<h3 class="text-white m-a0">Half Time Prediction</h3>
+							</div>
+							<table class="table table-bordered  border-light dez-score-table bg-white"> 
+								<thead> 
+									<tr class=""> 
+										<th>C</th> 
+										<th>Team</th> 
+										<th>Time</th> 
+										<th>Tip</th> 
+										<th>Odds</th> 
+									</tr> 
+								</thead> 
+								<tbody> 
+									{% for rs in games %}
+									<tr> 
+										<th scope="row">1</th> 
+										<td>{{ rs.htA_home_team }} vs {{ rs.htA_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.htA_league }}</td> 
+										<td>{{ rs.htA_tip }}</td> 
+										<td>{{ rs.htA_odds }}</td> 
+									</tr>
+									<tr> 
+										<th scope="row">2</th> 
+										<td>{{ rs.htB_home_team }} vs {{ rs.htB_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.htB_league }}</td> 
+										<td>{{ rs.htB_tip }}</td> 
+										<td>{{ rs.htB_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">3</th> 
+										<td>{{ rs.htC_home_team }} vs {{ rs.htC_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.htC_league }}</td> 
+										<td>{{ rs.htC_tip }}</td> 
+										<td>{{ rs.htC_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">4</th> 
+										<td>{{ rs.htD_home_team }} vs {{ rs.htD_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.htD_league }}</td> 
+										<td>{{ rs.htD_tip }}</td> 
+										<td>{{ rs.htD_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">5</th> 
+										<td>{{ rs.htE_home_team }} vs {{ rs.htE_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.htE_league }}</td> 
+										<td>{{ rs.htE_tip }}</td> 
+										<td>{{ rs.htE_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">6</th> 
+										<td>{{ rs.htF_home_team }} vs {{ rs.htF_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.htF_league }}</td> 
+										<td>{{ rs.htF_tip }}</td> 
+										<td>{{ rs.htF_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">7</th> 
+										<td>{{ rs.htG_home_team }} vs {{ rs.htG_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.htG_league }}</td> 
+										<td>{{ rs.htG_tip }}</td> 
+										<td>{{ rs.htG_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">8</th> 
+										<td>{{ rs.htH_home_team }} vs {{ rs.htH_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.htH_league }}</td> 
+										<td>{{ rs.htH_tip }}</td> 
+										<td>{{ rs.htH_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">9</th> 
+										<td>{{ rs.htI_home_team }} vs {{ rs.htI_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.htI_league }}</td> 
+										<td>{{ rs.htI_tip }}</td> 
+										<td>{{ rs.htI_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">10</th> 
+										<td>{{ rs.htJ_home_team }} vs {{ rs.htJ_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.htJ_league }}</td> 
+										<td>{{ rs.htJ_tip }}</td> 
+										<td>{{ rs.htJ_odds }}</td> 
+									</tr>
+									{% endfor %}
+									
+								</tbody> 
+							</table>
+						</div>
+						{% endif %}
+						{% endfor %}
+
+						{% for rs in games %}
+						{% if rs.ftD_odds == "None"  %} {% elif rs.ftD_odds == "" %} {% else %}
+						<!-- Match Overview -->
+						<div class="dez-card">
+							<div class="dez-head-bx skew-triangle right-top m-a-out">
+								<h3 class="text-white m-a0">Half Time Prediction</h3>
+							</div>
+							<table class="table table-bordered  border-light dez-score-table bg-white"> 
+								<thead> 
+									<tr class=""> 
+										<th>C</th> 
+										<th>Team</th> 
+										<th>Time</th> 
+										<th>Tip</th> 
+										<th>Odds</th> 
+									</tr> 
+								</thead> 
+								<tbody> 
+									{% for rs in games %}
+									<tr> 
+										<th scope="row">1</th> 
+										<td>{{ rs.ftA_home_team }} vs {{ rs.ftA_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ftA_league }}</td> 
+										<td>{{ rs.ftA_tip }}</td> 
+										<td>{{ rs.ftA_odds }}</td> 
+									</tr>
+									<tr> 
+										<th scope="row">2</th> 
+										<td>{{ rs.ftB_home_team }} vs {{ rs.ftB_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ftB_league }}</td> 
+										<td>{{ rs.ftB_tip }}</td> 
+										<td>{{ rs.ftB_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">3</th> 
+										<td>{{ rs.ftC_home_team }} vs {{ rs.ftC_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ftC_league }}</td> 
+										<td>{{ rs.ftC_tip }}</td> 
+										<td>{{ rs.ftC_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">4</th> 
+										<td>{{ rs.ftD_home_team }} vs {{ rs.ftD_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ftD_league }}</td> 
+										<td>{{ rs.ftD_tip }}</td> 
+										<td>{{ rs.ftD_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">5</th> 
+										<td>{{ rs.ftE_home_team }} vs {{ rs.ftE_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ftE_league }}</td> 
+										<td>{{ rs.ftE_tip }}</td> 
+										<td>{{ rs.ftE_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">6</th> 
+										<td>{{ rs.ftF_home_team }} vs {{ rs.ftF_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ftF_league }}</td> 
+										<td>{{ rs.ftF_tip }}</td> 
+										<td>{{ rs.ftF_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">7</th> 
+										<td>{{ rs.ftG_home_team }} vs {{ rs.ftG_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ftG_league }}</td> 
+										<td>{{ rs.ftG_tip }}</td> 
+										<td>{{ rs.ftG_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">8</th> 
+										<td>{{ rs.ftH_home_team }} vs {{ rs.ftH_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ftH_league }}</td> 
+										<td>{{ rs.ftH_tip }}</td> 
+										<td>{{ rs.ftH_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">9</th> 
+										<td>{{ rs.ftI_home_team }} vs {{ rs.htI_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ftI_league }}</td> 
+										<td>{{ rs.ftI_tip }}</td> 
+										<td>{{ rs.ftI_odds }}</td> 
+									</tr>
+
+									<tr> 
+										<th scope="row">10</th> 
+										<td>{{ rs.ftJ_home_team }} vs {{ rs.ftJ_away_team }} <span class="team-thumb"></span></td> 
+										<td>{{ rs.ftJ_league }}</td> 
+										<td>{{ rs.ftJ_tip }}</td> 
+										<td>{{ rs.ftJ_odds }}</td> 
+									</tr>
+									{% endfor %}
+									
+								</tbody> 
+							</table>
+						</div>
+						{% endif %}
+						{% endfor %}
 
 						<!-- Latest Match End -->
 						<!-- Latest Blog -->
@@ -97,55 +909,44 @@
 							</div>	
 						</div>
 						<div class="dez-live-match text-white">
+							{% for rs in sent %}
 							<div class="m-b20 blog-grid date-style-2">
 								<div class="dez-post-media dez-img-effect zoom-slow"> 
 									<img width="960" height="342" src="{% static 'main_app/images/background/CC-696x391.jpg' %}" alt=""/>
 								</div>
 								<div class="dez-post-info border-1 p-a20 border-light bg-gray-middle">
 									<div class="dez-post-title ">
-										<h3 class="m-t0 m-b10"><a href="#" class="text-white">Welcome Message</a></h3>
+										<h3 class="m-t0 m-b10"><a href="#" class="text-white">{{ rs.title }}</a></h3>
 									</div>
 									<div class="dez-post-meta ">
 										<ul>
-											<li class=""> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2020</span> </li>
-											<li class="post-author"><i class="fa fa-user"></i>By <a href="#">demongo</a> </li>
+											<li class=""> <i class="fa fa-calendar"></i><strong>{{ rs.create_at }}</strong></li>
+											<li class="post-author"><i class="fa fa-user"></i>By <a href="#">OJ</a> </li>
 											<li class="post-comment"><i class="fa fa-comments"></i> <a href="#">CEO</a> </li>
 										</ul>
 									</div>
+									
 									<div class="dez-post-text">
-										<p>A warm welcome from the staff of NoBeJujuBeThis.com! We are here to provide our clients with football tips and predictions, helping them with their betting career.
-										We started as a successful mail tips service back in 2014 and in summer 2018 we announced our first website, the same website you are checking out now!<br>
-										We do not just use statistics and news for our predictions. We use a special SQL software that accurately selects the most secure matches every day.<br>
-										With years of experience and knowledge behind our backs, we can confidently say that we stand out and our service is better than 90% of the scam sites on this oversold market - a claim we are already proving with results.<br>
-										Our professional tipsters provide football predictions for all major leagues such as the English Premier League, the Spanish Primera Division, the German Bundesliga, The Italian Serie A, the Championship Division and of course the Europa League and the Champions League. If you are interested in participating in our team, you can buy our daily service or consider our long-term plans on the Serives and Prices page.
+										<p>{{ rs.message }}
 										</p>
+
 									</div>
+									
 									
 									
 								</div>
 							</div>
+							{% endfor %}
 							
 						
 						<!-- Latest Match End -->
 							<div class="blog-post blog-md clearfix bg-gray-middle  border-1 border-light p-a15">
-								<div class="dez-post-media dez-img-effect zoom-slow "> <a href="#">
-									<img width="700" height="438" src="{% static 'main_app/images/our-work/pic3.jpg' %}" alt=""></a> 
-								</div>
+								
 								<div class="dez-post-info text-white">
-									<div class="dez-post-title ">
-										<h3 class="m-t5"><a href="#" class="text-white">Title of first blog post</a></h3>
-									</div>
-									<div class="dez-post-meta ">
-										<ul>
-											<li class="post-date"> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2020</span> </li>
-											<li class="post-author"><i class="fa fa-user"></i>By <a href="#">demongo</a> </li>
-											<li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0</a> </li>
-										</ul>
-									</div>
-									<div class="dez-post-text">
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-									</div>
-									<div class="dez-post-readmore"> <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">READ MORE<i class="fa fa-angle-double-right"></i></a> </div>
+									
+									
+									
+									
 									
 								</div>
 							</div>
