@@ -84,27 +84,17 @@
                     <!-- Left part start END -->
                     <!-- Right part start -->
                     <div class="col-lg-3 m-b30">
-                        <div class="icon-bx-wraper bx-style-1 p-a30 center m-b15">
-                            <div class="icon-bx-sm text-primary bg-white radius border-2 m-b20"> <a href="#" class="icon-cell"><i class="fa fa-user"></i></a> </div>
-                            <div class="icon-content">
-                                <h5 class="dez-tilte text-uppercase">Recent Highlights</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
-                            </div>
-                        </div>
-                        <div class="icon-bx-wraper bx-style-1 p-a30 center m-b15">
-                            <div class="icon-bx-sm text-primary bg-white radius border-2 m-b20"> <a href="#" class="icon-cell"><i class="fa fa-building-o"></i></a> </div>
-                            <div class="icon-content">
-                                <h5 class="dez-tilte text-uppercase">Recent Highlights</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
-                            </div>
-                        </div>
-                        <div class="icon-bx-wraper bx-style-1 p-a20 left">
-                            <div class="icon-bx-xs text-primary bg-white radius border-2 "> <a href="#" class="icon-cell"><i class="fa fa-code"></i></a> </div>
-                            <div class="icon-content">
-                                <h5 class="dez-tilte text-uppercase">Content title</h5>
-                                <p>Lorem ipsum dolor sit elit nonummy dolor is euismod end [...]</p>
-                            </div>
-                        </div>
+                        {% for rs in ads %}
+                        <div class="">
+                            
+                            <a href="{{ rs.link }}">
+                                <div class="dez-media dez-img-overlay9"><img width="600" height="350" src="{{ rs.image.url }}" alt=""/></div>
+                             
+                            
+                        </div><br>
+                        {% endfor %}
+
+                        
                     </div>
                     <!-- Right part start END -->
                 </div>

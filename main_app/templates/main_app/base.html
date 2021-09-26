@@ -52,13 +52,13 @@
 					<div class="row justify-content-between">
 						<div class="dez-topbar-left">
 							<ul class="social-line text-center pull-right">
-								<li><a href="tel:08129859405"><i class="fa fa-phone"></i> <span>+234 8129 8594 05</span> </a></li>
+								<li><a href="tel:090938472244"><i class="fa fa-phone"></i> <span>+234-909-384-72244</span> </a></li>
 								<li><a href="mailto:contact@nobejujubethis.com"><i class="fa fa-clock-o"></i> <span>contact@nobejujubethis.com</span></a></li>
 							</ul>
 						</div>                        
 						<div class="dez-topbar-right">
 							<ul class="social-line text-center pull-right">
-								<li><a href="tel:08129859405" class="fa fa-phone"></a></li>
+								<li><a href="tel:090938472244" class="fa fa-phone"></a></li>
 								<li><a href="https://twitter.com/nobejujubethis.com/" class="fa fa-twitter"></a></li>
 								<li><a href="mailto:contact@nobejujubethis.com" class="fa fa-google-plus"></a></li>
 								{% if user.is_authenticated %}
@@ -84,11 +84,7 @@
 							<span></span>
 						</button>
 						<!-- extra nav -->
-						<div class="extra-nav">
-							<div class="extra-cell">
-								<button id="quik-search-btn" type="button" class="site-button"><i class="fa fa-search"></i></button>
-							</div>
-						</div>
+						
 						<!-- Quik search -->
 						<div class="dez-quik-search bg-primary ">
 							<form action="#">
@@ -115,8 +111,8 @@
 								<li class="{% if contact == request.path %} active {% endif %}"> <a href="{{ contact }}">Contact
 								</a></li>
 								
-								{% url 'subscribe' as subscribe %}
-								<li class="{% if subscribe == request.path %} active {% endif %}"> <a href="{{ subscribe }}">Subscribe</a></li>
+								<!--{% url 'subscribe' as subscribe %}
+								<li class="{% if subscribe == request.path %} active {% endif %}"> <a href="{{ subscribe }}">Subscribe</a></li>-->
 								
 								{% url 'vip_game' as vip_game %}
 								<li class="{% if vip_game == request.path %} active {% endif %}"> <a href="{{ vip_game }}">Vip Games</a></li>

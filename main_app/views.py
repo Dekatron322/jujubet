@@ -68,10 +68,15 @@ def predict(request):
 
 @login_required(login_url='/signin')
 def vip_game(request):
+    predict= VipGames.objects.all()
     games = VipGames.objects.all().order_by('-id')[:1]
+    ads = Advert.objects.all().order_by('-id')[:2]
+    big = Advert.objects.all().order_by('-id')[3:4]
+    side = Advert.objects.all().order_by('-id')[5:7]
+    sides = Advert.objects.all().order_by('-id')[5:7]
     footer = Advert.objects.all().order_by('-id')[1:9]
     sent = Message.objects.all().order_by('-id')[:1]
-    context = {'games': games, "footer":footer, "sent":sent}
+    context = {'games': games, "footer":footer, "sent":sent, "predict":predict, "ads":ads, "big":big, "side":side, "sides":sides}
    
     return render(request, 'main_app/vip.html', context)
 
@@ -121,31 +126,18 @@ def subscribe(request):
 
 def livescores(request):
 
-    import requests
+    ads = Advert.objects.all().order_by('-id')[:2]
 
-    url = "https://api.sofascore.com/api/v1/sport/football/scheduled-events/2021-09-15"
-
-    payload = ""
-
-    headers = {
-        'cookie': "__cfduid=d784ae9d9a4af12ae1d8f525636e03ccc1619367812",
-        'authority': "api.sofascore.com",
-        "cache-control": "max-age-0",
-        "sec-ch-ua": "^\^"
-    }
-
-    response = requests.request("GET", url, data=payload, headers=headers)
-    data = response.json()
-
-    events = data['events']
+    context = {"ads":ads}
 
        
-    return render(request, 'main_app/livescores.html', {'events':events})
+    return render(request, 'main_app/livescores.html', context)
 
 
 def policy(request):
+    ads = Advert.objects.all().order_by('-id')[:4]
     footer = Advert.objects.all().order_by('-id')[1:9]
-    context = {"footer":footer}
+    context = {"footer":footer, "ads":ads}
 
     return render(request, 'main_app/policy.html', context)
 
@@ -375,6 +367,7 @@ def games(request):
             league = form.cleaned_data.get('league')
             tip = form.cleaned_data.get('tip')
             odds = form.cleaned_data.get('odds')
+            
 
             a_home_team = form.cleaned_data.get('a_home_team')
             a_away_team = form.cleaned_data.get('a_away_team')

@@ -901,13 +901,15 @@
 						</div>
 						
 						<div class="row col-set-block">
-							<div class="col-lg-6 col-sm-6 m-b20">
-								<div class="dez-media dez-img-overlay9"><a href=""><img width="600" height="350" src="{% static 'main_app/images/background/1150702.jpg' %}" alt=""/></a></div>
+							{% for rs in ads %}
+							<div class="col-lg-6 col-sm-6 m-b20"><a href="{{ rs.link }}">
+								<div class="dez-media dez-img-overlay9"><img width="600" height="350" src="{{ rs.image.url }}" alt=""/></div>
 							</div>	
-							<div class="col-lg-6 col-sm-6 m-b20">
-								<div class="dez-media dez-img-overlay9"><a href=""><img width="600" height="350" src="{% static 'main_app/images/background/20-207756_messi-vs-real-madrid-wallpaper-lionel-messi-shirt.jpg' %}" alt=""/></a></div>
-							</div>	
+							{% endfor %}
+							
 						</div>
+
+						
 						<div class="dez-live-match text-white">
 							{% for rs in sent %}
 							<div class="m-b20 blog-grid date-style-2">
@@ -957,65 +959,13 @@
 					<!-- Right Section -->
 					<div class="col-sm-12 col-lg-4 col-12">
 						<!-- Match Overview -->
-						<div class="dez-card">
+						<div class="dez-card ">
 							<div class="dez-head-bx skew-triangle right-top m-a-out">
-								<h3 class="text-white m-a0">Premier League Standings</h3>
+								<h3 class="text-white m-a0">Players Ranking</h3>
 							</div>
-							<table class="table table-bordered bg-gray-middle border-light text-white dez-score-table"> 
-								<thead> 
-									<tr class="table-headding"> 
-										<th>#</th> 
-										<th>Team</th> 
-										<th>P</th> 
-										<th>W</th> 
-										<th>L</th> 
-									</tr> 
-								</thead> 
-								<tbody> 
-									<tr> 
-										<th scope="row">1</th> 
-										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo1.png' %}" alt=""/></span>Liverpool</td> 
-										<td>10</td> 
-										<td>12</td> 
-										<td>08</td> 
-									</tr>
-									<tr> 
-										<th scope="row">2</th> 
-										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo2.png' %}" alt=""/></span>Chelsea</td> 
-										<td>10</td> 
-										<td>12</td> 
-										<td>08</td> 
-									</tr>
-									<tr> 
-										<th scope="row">3</th> 
-										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo3.png' %}" alt=""/></span> Norwich City</td> 
-										<td>10</td> 
-										<td>12</td> 
-										<td>08</td> 
-									</tr>
-									<tr> 
-										<th scope="row">4</th> 
-										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo1.png' %}" alt=""/></span>West Brom</td> 
-										<td>10</td> 
-										<td>12</td> 
-										<td>08</td> 
-									</tr>
-									<tr> 
-										<th scope="row">5</th> 
-										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo2.png' %}" alt=""/></span>sunderland</td> 
-										<td>10</td> 
-										<td>12</td> 
-										<td>08</td> 
-									</tr>
-									<tr> 
-										<th scope="row">6</th> 
-										<td><span class="team-thumb"><img width="30" height="30" src="{% static 'main_app/images/sports-logo/small/logo3.png' %}" alt=""/></span>Chelsea</td> 
-										<td>10</td> 
-										<td>12</td> 
-										<td>08</td> 
-									</tr>
-								</tbody> 
-							</table>
+							<iframe src="https://www.scoreaxis.com/widget/league-top-players/564?tabs=1&bg=%23FFFFFF&color=%23313934" width="100%" height="377" style="border: none;"></iframe>
+
+							<iframe src="https://www.scoreaxis.com/widget/standings-widget/2?columns=1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1&tabs=1&header=1&bg=%23FFFFFF&color=%23313934&group=&bodyBackground=%23050000&textColor=%23f0f4f2&borderColor=%23dfc33a&headerColor=%230a0a0a&headerBg=%23bccd37" width="100%" height="1155" style="border: none;"></iframe>
 						</div>
 						<!-- Match Overview END -->
 						
@@ -1023,38 +973,43 @@
 						<!-- Recent Posts -->
 						<div class="dez-card col-lg-12 col-sm-6">
 							<div class="dez-head-bx skew-triangle right-top m-a-out">
-								<h3 class="text-white m-a0">RECENT TIPS</h3>
+								<h3 class="text-white m-a0">Recent VIP Games</h3>
 							</div>
 							<div class="home-dez widget recent-posts-entry bg-gray-middle p-a20 border-1 border-light">
 								
 								<div class="widget-post-bx text-white">
-									{% for rs in games %}
+									{% for rs in predict %}
+									{% if rs.result == "PENDING"  %}
+
+									{% else %}
 									<div class="widget-post clearfix">
 										
 										<div class="dez-post-info">
 											<div class="dez-post-header">
-												<h6 class="post-title" style="color: #fff">{% if rs.result == "LOST"  %}  {{ rs.home_team }} vs {{ rs.away_team }} - {{ rs.odds }}  <img height="30px" width="30px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSceOd4YLjKr-U9RzqjCW5yZhRBIYAcr7Dhg&usqp=CAU"> {% elif rs.result == "WON" %} {{ rs.home_team }} vs {{ rs.away_team }} - {{ rs.odds }} <img height="30px" width="30px" src="https://www.freeiconspng.com/thumbs/yes-png/green-yes-check-mark-png-17.png">{% else %} {% endif %}</a></h6>
+												<h6 class="post-title" style="color: #fff">{% if rs.result == "LOST"  %}  {{ rs.home_team }} vs {{ rs.away_team }} - {{ rs.odds }}  <img height="30px" width="30px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSceOd4YLjKr-U9RzqjCW5yZhRBIYAcr7Dhg&usqp=CAU"> - {{ rs.create_at }} {% elif rs.result == "WON" %} {{ rs.home_team }} vs {{ rs.away_team }} - {{ rs.odds }} <img height="30px" width="30px" src="https://www.freeiconspng.com/thumbs/yes-png/green-yes-check-mark-png-17.png"> - {{ rs.create_at }}{% else %} {% endif %} </a></h6>
 											</div>
 											
 										</div>
 									</div>
+									{% endif %}
 									{% endfor %}
 									
 								</div>
 							</div>
-						</div>
 						<!-- Recent Posts END -->
 						<!-- Ads -->
 						<div class="add col-lg-12 col-sm-6 m-b30">
 							<div class="m-b20">
-								<div class="dez-media dez-img-overlay9"><a href=""><img src="{% static 'main_app/images/background/wp6871963.jpg' %}" alt=""/></a></div><br>
-
-								<div class="dez-media dez-img-overlay9"><a href=""><img src="{% static 'main_app/images/MessiRonaldo_Getty_AP_Ringer.jpeg' %}" alt=""/></a></div>
+								{% for rs in side %}
+								<div class="dez-media "><a href="{{ rs.link }}"><img src="{{ rs.image.url }}" alt=""/></a></div><br>
+								{% endfor %}
+								
 							</div>
-							<img width="492" height="487" src="{% static 'main_app/images/background/thumb2-cristiano-ronaldo-aaron-ramsey-paulo-dybala-gonzalo-higuain-matthijs-de-ligt.jpg' %}" alt=""/>
-
-
-						</div>
+							{% for rs in sides %}
+							<div class="m-b20">
+							<a href="{{ rs.link }}"> 
+							<img width="492" height="487" src="{{ rs.image.url }}" alt=""/></a></div>
+							{% endfor %}<br>
 							
 						<!-- Ads END -->
 						</div>
